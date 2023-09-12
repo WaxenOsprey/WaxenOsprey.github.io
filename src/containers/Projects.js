@@ -29,7 +29,7 @@ const Projects = ({ projects }) => {
     return (
         <ProjectsContainer>
             <Title>Projects</Title>
-            <Message>This is the projects page. Select a project:</Message>
+            <Message>Select a project:</Message>
 
             <ProjectsWrapper>
                 <SelectedProjectContainer>
@@ -105,7 +105,9 @@ const Projects = ({ projects }) => {
 const ProjectsContainer = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 8rem;
+    /* margin: 2rem; */
+    margin-left: 8rem;
+    margin-right: 8rem;
     width: 100%;
 `;
 
@@ -144,6 +146,7 @@ const Message = styled.p`
     border-top: 2px solid rgb(92,188,177);
     border-right: 2px solid rgb(92,188,177);
     padding-top: 1rem;
+    text-align: left;
 `
 
 const MenuItem = styled.p`

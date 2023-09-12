@@ -4,36 +4,74 @@ import profilePic from '../assets/pic5.jpg'
 const About = () => {
     return ( 
     <>
+                <AboutContainer>
+                    <Title>About</Title>
+                    <Message>This is the about page</Message>
 
-            <AboutContainer>
-                <Title>About</Title>
-                <Message>This is the about page</Message>
-                <ProfilePic src={profilePic} alt="profile picture"/>
-                <AboutSection>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elit lacus, bibendum vitae neque ut, commodo sodales nibh. Sed aliquet fermentum ex sit amet iaculis. Proin mattis nunc metus, congue luctus quam varius ut. Cras dapibus in odio non aliquet. Suspendisse nisl mauris, aliquet sit amet maximus sit amet, tristique a ante. Proin rutrum blandit sodales. Sed accumsan vestibulum urna, a congue enim sollicitudin egestas. Integer eu ultrices diam, id rutrum lectus. Nulla vitae nibh ac dolor fermentum mollis. Sed tincidunt ultrices arcu nec vestibulum. Aliquam consectetur eu dolor quis sodales. Phasellus cursus et neque a porta. Donec vel scelerisque urna, a auctor justo. Cras sit amet magna eget tellus bibendum vehicula. In volutpat justo id sem porttitor, non pulvinar justo congue. Aliquam facilisis luctus nunc, nec aliquet nisi semper sit amet.
+                    <AboutWrapper>
+                        <UpperContainer>
+                            <ProfilePic src={profilePic} alt="profile picture"/>
+                            <UpperWrapper>
+                                <AboutSection>
+                                Highly motivated and creative software developer with a background in history, heritage and tourism. I have just completed a 16 week intensive professional software development course, where I developed skills in Python, JavaScript and Java. 
 
-                </AboutSection>
-                <AboutSection>
-                Etiam ut justo maximus, pharetra orci mattis, ornare ipsum. Fusce vehicula, risus nec gravida ullamcorper, metus felis tempor risus, eget convallis massa velit sed lorem. Mauris et felis mauris. Vivamus dictum sem augue, sed mollis enim aliquam sed. Nulla id pellentesque lacus, quis fringilla nisl. Duis sagittis tellus arcu, ut suscipit dolor lobortis in. Donec massa dolor, congue quis urna ut, ornare varius eros. Morbi euismod nunc ut massa aliquet, eget iaculis lectus suscipit. Duis faucibus quam eros, non aliquet nulla consectetur sodales.
+                                </AboutSection>
+                            </UpperWrapper>
+                        </UpperContainer>
 
-                </AboutSection>
+                        <AboutSection>
+                        My strengths lie in my capacity for self-driven research and my proven commitment to lifelong learning. I excel in communicating complex information clearly and concisely. Additionally, I have valuable experience in working efficiently in busy and fast-paced environments.
 
-                <AboutSection>
-                Nunc diam quam, gravida at nunc sit amet, dapibus vulputate urna. Quisque quam nisi, semper in ex quis, pharetra laoreet magna. Nunc mattis euismod leo, et maximus massa gravida vel. Maecenas maximus nisl est, et elementum justo congue vitae. Donec at efficitur risus. Nulla non arcu ultrices, molestie orci eget, iaculis ante. Donec ultricies tristique arcu, sit amet porttitor orci pharetra vitae. Vestibulum mollis faucibus varius. Donec commodo augue molestie ante molestie sodales. Aliquam euismod accumsan lectus, quis dictum nisi dapibus sit amet. Duis vel ultricies nunc.
-                </AboutSection>
-            </AboutContainer>
+                        </AboutSection>
+
+                        <AboutSection>
+                        Despite an ongoing passion for history and heritage, I have pursued a new career in software development, to leverage my strengths which I believe are well-suited to the tech sector. I thoroughly enjoy building things and being part of ambitious projects. I enjoy collaborating in busy team environments, yet I am also happy to work independently. I strongly believe in the central role of technology in driving society forward and finding solutions to improve our lives. My professional ambition is to find a place in the Scottish tech ecosystem where I can contribute effectively.
+                        </AboutSection>
+                    </AboutWrapper>
+
+                </AboutContainer>
         
 
         
     </> );
 }
 
+
+
+
+
 const AboutContainer = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 8rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
     width: 100%;
 `;
+
+const AboutWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+`;
+
+const UpperWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+
+`;
+
+const UpperContainer = styled.div`
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+
+`;
+
 
 const Title = styled.p`
     color: rgb(203,214,244);
@@ -50,11 +88,13 @@ const Message = styled.p`
     margin-top: 2rem;
     margin-bottom: 2rem;
     line-height: 1.5;
+    border-top: 2px solid rgb(92,188,177);
+    border-right: 2px solid rgb(92,188,177);
 `
 
 const ProfilePic = styled.img`
-    height: 300px;
-    width: 300px;
+    height: 400px;
+    width: 400px;
     border-radius: 50%;
     margin: 2rem;
 `;
@@ -67,6 +107,7 @@ const AboutSection = styled.p`
     margin-top: 2rem;
     margin-bottom: 2rem;
     line-height: 1.5;
+
 `
 
 export default About;
