@@ -6,26 +6,32 @@ const About = () => {
     <>
                 <AboutContainer>
                     <Title>About</Title>
-                    <Message>This is the about page</Message>
+                    <Message></Message>
 
                     <AboutWrapper>
                         <UpperContainer>
                             <ProfilePic src={profilePic} alt="profile picture"/>
                             <UpperWrapper>
                                 <AboutSection>
-                                Highly motivated and creative software developer with a background in history, heritage and tourism. I have just completed a 16 week intensive professional software development course, where I developed skills in Python, JavaScript and Java. 
+                                Hello, I'm Paul Cumming, a recently trained Software Engineer with a passion for technology and a background in heritage and tourism. My journey into the tech world began after completing an intensive 16-week Professional Software Development course at CodeClan Digital Skills Academy, where I earned a PDA in Software Development. However, my transition from over five years in the heritage and tourism sector was not a sudden change; it was a well-thought-out decision to embrace fresh challenges and discover a field that values continuous personal growth.
+
+My unique perspective on technology is rooted in my background in heritage and tourism. For more than five years, I built my skills through roles ranging from conducting historical tours at Edinburgh Castle to ensuring visitor and site safety. Prior to this, I also pursued my academic interests in history at Edinburgh University. This academic experience enhanced my research, analysis, and communication skills, which have proven invaluable in my both my heritage and tech careers.
+
+My technical education at CodeClan provided me with a strong foundation in Agile best practices, Test-Driven Development (TDD), and Object-Oriented Programming (OOP). Proficient in languages like Python, JavaScript, and Java, I'm equipped to tackle a wide range of challenges. Beyond formal education, my experiences include providing computer repairs and upgrades at Internuts Computer Repairs.
+
+As I continue to learn, I'm driven by the belief that technology fuels societal progress. My aspiration is to find my niche within Scotland's vibrant tech ecosystem, where I can make meaningful contributions based on my diverse experiences and expertise.
+
+For more insights into my journey, you can explore my LinkedIn and GitHub profiles. Feel free to get in touch!
 
                                 </AboutSection>
                             </UpperWrapper>
                         </UpperContainer>
 
                         <AboutSection>
-                        My strengths lie in my capacity for self-driven research and my proven commitment to lifelong learning. I excel in communicating complex information clearly and concisely. Additionally, I have valuable experience in working efficiently in busy and fast-paced environments.
 
                         </AboutSection>
 
                         <AboutSection>
-                        Despite an ongoing passion for history and heritage, I have pursued a new career in software development, to leverage my strengths which I believe are well-suited to the tech sector. I thoroughly enjoy building things and being part of ambitious projects. I enjoy collaborating in busy team environments, yet I am also happy to work independently. I strongly believe in the central role of technology in driving society forward and finding solutions to improve our lives. My professional ambition is to find a place in the Scottish tech ecosystem where I can contribute effectively.
                         </AboutSection>
                     </AboutWrapper>
 

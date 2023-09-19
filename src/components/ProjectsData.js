@@ -1,55 +1,58 @@
 import { 
+    solarSystemIntro,
     solarSystemOverview,
     solarSystemFeatures,
     solarSystemTechnologies,
+    phoenixTraderIntro,
     phoenixTraderOverview,
     phoenixTraderFeatures,
     phoenixTraderTechnologies,
+    gwentishIntro,
     gwentishOverview,
     gwentishFeatures,
     gwentishTechnologies
 
 } from "../sectionStrings";
 
-const htmlLogo = "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg";
-const cssLogo = "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg";
-const pythonLogo = "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg";
-const flaskLogo = "https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg";
 const postgresqlLogo = "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg";
+const pythonLogo = "https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/python/python-original.svg";
+const flaskLogo = "https://cms-assets.tutsplus.com/uploads/users/769/posts/15965/preview_image/flask.png";
+const htmlLogo = "https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/html5/html5-original.svg";
+const cssLogo = "https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/css3/css3-original.svg";
 
 const javaScriptLogo = "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
 const reactLogo = "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
-const nodeLogo = "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
-const mongoDBLogo = "https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg"
+const nodeLogo = "https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/nodejs/nodejs-original.svg"
+const mongoDBLogo = "https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/mongodb/mongodb-original.svg"
 
-const springBootLogo = "https://upload.wikimedia.org/wikipedia/commons/4/44/Spring_Framework_Logo_2018.svg"
-const javaLogo = "https://upload.wikimedia.org/wikipedia/de/thumb/e/e1/Java-Logo.svg/486px-Java-Logo.svg.png?20061221200047"
+const springBootLogo = "https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/spring/spring-original.svg"
+const javaLogo = "https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/java/java-original.svg"
 
 const solarSystemLogos = [
-    {title: "HTML", src: htmlLogo},
-    {title: "CSS", src: cssLogo},
+    {title: "PostgreSQL", src: postgresqlLogo},
     {title: "Python", src: pythonLogo},
     {title: "Flask", src: flaskLogo},
-    {title: "PostgreSQL", src: postgresqlLogo}
+    {title: "HTML", src: htmlLogo},
+    {title: "CSS", src: cssLogo},
 ]
 
 const phoenixTraderLogos = [
 
-    {title: "JavaScript", src: javaScriptLogo},
-    {title: "CSS", src: cssLogo},
-    {title: "React", src: reactLogo},
+    {title: "MongoDB", src: mongoDBLogo},
     {title: "Node", src: nodeLogo},
-    {title: "MongoDB", src: mongoDBLogo}
+    {title: "JavaScript", src: javaScriptLogo},
+    {title: "React", src: reactLogo},
+    {title: "CSS", src: cssLogo},
 
 ]
 
 const gwentishLogos = [
 
+  {title: "Spring Boot", src: springBootLogo},
     {title: "Java", src: javaLogo},
-    {title: "Spring Boot", src: springBootLogo},
     {title: "JavaScript", src: javaScriptLogo},
-    {title: "CSS", src: cssLogo},
     {title: "React", src: reactLogo},
+    {title: "CSS", src: cssLogo},
 
 ]
 
@@ -63,6 +66,10 @@ const projectsData = [
         id: 1,
         name: "SolarSystem.DB",
         sections: [
+            {
+              title: 'Introduction',
+              content: solarSystemIntro,
+            },
             {
               title: 'Overview',
               content: solarSystemOverview,
@@ -84,6 +91,10 @@ const projectsData = [
         name: "PhoenixTrader",
         sections: [
             {
+              title: 'Introduction',
+              content: phoenixTraderIntro,
+            },
+            {
               title: 'Overview',
               content: phoenixTraderOverview,
             },
@@ -103,6 +114,10 @@ const projectsData = [
         id: 3,
         name: "Gwentish!",
         sections: [
+            {
+              title: 'Introduction',
+              content: gwentishIntro,
+            },
             {
               title: 'Overview',
               content: gwentishOverview,

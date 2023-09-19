@@ -8,6 +8,8 @@ import NavBar from './components/NavBar';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import SideBar from './components/SideBar';
 import projectsData from '../src/components/ProjectsData';
+import './App.css';
+
 
 
 

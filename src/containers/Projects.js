@@ -36,7 +36,7 @@ const Projects = ({ projects }) => {
                     {selectedProject && (
                         <>
                             <ProjectTitle>{selectedProject.name}</ProjectTitle>
-                            <ProjectIntro>Introduce the project</ProjectIntro>
+                            <ProjectIntro>{selectedProject.sections[0].content}</ProjectIntro>
                             
                             <VideoContainer>
                                 <YouTubePlayer videoId={selectedProject.video} /> 
@@ -44,10 +44,10 @@ const Projects = ({ projects }) => {
 
                             <ProjectOverViewContainer>
                                 <ProjectDetailsWrapper>
-                                    <ProjectHeading>{selectedProject.sections[0].title}</ProjectHeading>
+                                    <ProjectHeading>{selectedProject.sections[1].title}</ProjectHeading>
                                     <ProjectContent>
                                         <ReactMarkdown>
-                                            {selectedProject.sections[0].content}
+                                            {selectedProject.sections[1].content}
                                         </ReactMarkdown>
                                     </ProjectContent>
                                 </ProjectDetailsWrapper>
@@ -57,9 +57,9 @@ const Projects = ({ projects }) => {
                             <ProjectOverViewContainer>
                                 
                                 <ProjectDetailsWrapper>
-                                    <ProjectHeading>{selectedProject.sections[1].title}</ProjectHeading>
+                                    <ProjectHeading>{selectedProject.sections[2].title}</ProjectHeading>
                                     <ProjectContent>
-                                        <ReactMarkdown source={selectedProject.sections[1].content} renderers={CustomRenderer} >{selectedProject.sections[1].content}</ReactMarkdown>
+                                        <ReactMarkdown source={selectedProject.sections[2].content} renderers={CustomRenderer} >{selectedProject.sections[2].content}</ReactMarkdown>
                                     </ProjectContent>
                                 </ProjectDetailsWrapper>
 
@@ -67,7 +67,7 @@ const Projects = ({ projects }) => {
 
                             <ProjectOverViewContainer>
                                 <ProjectDetailsWrapper>
-                                    <ProjectHeading>{selectedProject.sections[2].title}</ProjectHeading>
+                                    <ProjectHeading>{selectedProject.sections[3].title}</ProjectHeading>
                                     <Logos>
                                         {selectedProject.logos.map((logo, index) => (
                                             <Logo key={index} src={logo.src} title={logo.title} alt="logo" />
@@ -77,7 +77,7 @@ const Projects = ({ projects }) => {
 
                                     <ProjectContent>
                                         <ReactMarkdown>
-                                            {selectedProject.sections[2].content}
+                                            {selectedProject.sections[3].content}
                                         </ReactMarkdown>
                                     </ProjectContent>
                                 </ProjectDetailsWrapper>
@@ -126,6 +126,8 @@ const ProjectIntro = styled.p`
     margin-top: 2rem;
     margin-bottom: 2rem;
     line-height: 1.5;
+    width: 50%;
+    font-style: italic;
 `
 
 const ProjectTitle = styled.p`
@@ -254,7 +256,7 @@ const Logos = styled.div`
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 2rem;
-    background-color: rgba(92,188,177, 0.6);
+    /* background-color: rgba(92,188,177, 0.6); */
     width: 100%;
     padding: 2rem;
 `;

@@ -11,7 +11,7 @@ const Home = () => {
             <Name>Paul Cumming.</Name>
             <Headline>I am a Junior Software Developer.</Headline>
             <Message>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fringilla massa tellus, sit amet rutrum lacus luctus id. Etiam posuere at lorem consectetur lacinia. Morbi in dui vel enim dignissim mattis nec sit amet magna. Phasellus dignissim nunc interdum mi maximus, in dapibus massa efficitur. Aliquam quis aliquet urna. Vestibulum nec urna semper, sagittis nisl eu, mollis enim. Nam rutrum sapien risus, ut eleifend erat fringilla nec. Donec et ipsum efficitur, lacinia nulla eget, viverra metus. Proin facilisis sapien non dui finibus consectetur. Phasellus sit amet nulla fringilla, sollicitudin leo id, interdum lectus. Fusce eu nisi non magna condimentum lobortis vitae varius ipsum. Suspendisse non odio eu sem accumsan tincidunt quis convallis ante. Sed mattis a urna vitae elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                
             </Message>
             <Link to="/projects">
                 <ActionButton > 

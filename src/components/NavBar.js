@@ -8,15 +8,15 @@ const NavBar = () => {
             <HomeLink to="/">PC</HomeLink>
             <NavList>
                 <NavListItem>
-                    <SpanNumber>1. </SpanNumber>
+                    <SpanNumber>01. </SpanNumber>
                     <NavListLink to="/about">About</NavListLink>
                 </NavListItem>
                 <NavListItem>
-                    <SpanNumber>2. </SpanNumber>
+                    <SpanNumber>02. </SpanNumber>
                     <NavListLink to="/projects">Projects</NavListLink>
                 </NavListItem>
                 <NavListItem>
-                    <SpanNumber>3. </SpanNumber>
+                    <SpanNumber>03. </SpanNumber>
                     <NavListLink to="/contact">Contact</NavListLink>
                 </NavListItem>
                 <CVLink href="/paulsamuelcumming.pdf" download>CV/Resume</CVLink>
