@@ -84,7 +84,8 @@ const projectsData = [
             },
           ],
           logos: solarSystemLogos,
-          video: "MIOJlNl5Mtw"
+          video: "MIOJlNl5Mtw",
+          gitHub: "https://github.com/WaxenOsprey/SolarSystem.DB"
     },
     {
         id: 2,
@@ -108,7 +109,8 @@ const projectsData = [
             },
           ],
           logos: phoenixTraderLogos,
-          video: "wmIUW2Ory1Q"
+          video: "wmIUW2Ory1Q",
+          gitHub: "https://github.com/WaxenOsprey/PhoenixTrader"
     },
     {
         id: 3,
@@ -132,7 +134,8 @@ const projectsData = [
             },
           ],
           logos: gwentishLogos,
-          video: "Zx98fQdlp_0"
+          video: "Zx98fQdlp_0",
+          gitHub: "https://github.com/WaxenOsprey/Gwentish"
     }
 ]
 

@@ -2,13 +2,16 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
 import YouTubePlayer from '../components/YouTubePlayer';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Projects = ({ projects }) => {
 
 
     useEffect(() => {
         setSelectedProject(projects[0]);
+        console.log(faGithub);
+
 
     }
     ,[]);
@@ -19,12 +22,16 @@ const Projects = ({ projects }) => {
         setSelectedProject(project);
     }
 
+    const GitHubIcon = styled(faGithub)
+
     const ColouredText = styled.span`
         color: rgb(92,188,177);`
 
     const CustomRenderer = {
         span: (props) => <ColouredText>{props.children}</ColouredText>,
     };
+
+
 
     return (
         <ProjectsContainer>
@@ -83,7 +90,10 @@ const Projects = ({ projects }) => {
                                 </ProjectDetailsWrapper>
 
                             </ProjectOverViewContainer>
-                            <GitHubLink>GitHub Repo</GitHubLink>
+                            <GitHubLinkContainer href={selectedProject.gitHub} target='blank'>
+                                GITHUB REPO
+                                    <FontAwesomeIcon icon={faGithub} style={{ marginLeft: "10%"}} />
+                            </GitHubLinkContainer>
                         </>
                     )}
                 </SelectedProjectContainer>
@@ -217,9 +227,10 @@ const ProjectDetailsWrapper = styled.div`
     `;
 
 
-const GitHubLink = styled.a`
+const GitHubLinkContainer = styled.a`
     color: rgb(92,188,177);
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
     margin: 0;
     padding: 0;
     margin-top: 2rem;
@@ -240,7 +251,9 @@ const GitHubLink = styled.a`
         border: 2px solid rgb(203,214,244);
         color: rgb(203,214,244);
     }
-    `
+`;
+
+
 
 const VideoContainer = styled.div`
 margin-top: 2rem;
@@ -267,6 +280,8 @@ const Logo = styled.img`
     margin-right: 2rem;
 
 `;
+
+
 
 
 export default Projects;

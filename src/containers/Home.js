@@ -13,7 +13,7 @@ const Home = () => {
             <Message>
                 
             </Message>
-            <Link to="/projects">
+            <Link to="/projects" style={{ textDecoration: 'none' }}>
                 <ActionButton > 
                     Check out my projects!
                 </ActionButton>
@@ -63,6 +63,7 @@ const Message = styled.p`
 const ActionButton = styled.button`
     color: rgb(92,188,177);
     font-size: 1rem;
+    text-decoration: none;
     margin: 0;
     padding: 0;
     margin-top: 2rem;
@@ -80,7 +81,7 @@ const ActionButton = styled.button`
     &:hover {
         color: rgb(203,214,244);
         border: 2px solid rgb(203,214,244);
-
+        text-decoration: none;
     }
 `;
 
