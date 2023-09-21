@@ -99,6 +99,7 @@ const Message = styled.p`
     margin-top: 2rem;
     margin-bottom: 2rem;
     line-height: 1.5;
+    height: 2rem;
     border-top: 2px solid rgb(92,188,177);
     border-right: 2px solid rgb(92,188,177);
 `;

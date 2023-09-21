@@ -38,7 +38,7 @@ const Hi = styled.p`
 
 const Name = styled.p`
     color: rgb(203,214,244);
-    font-size: 5rem; 
+    font-size: 6rem; 
     margin: 0;
     padding: 0;
 `;

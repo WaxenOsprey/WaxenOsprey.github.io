@@ -1,14 +1,21 @@
 import styled from 'styled-components';
 import worldMap from '../assets/world5.svg';
+import { useEffect } from 'react';
 
 
 
 const Contact = () => {
-  const email = 'paulsamuelcummingdev@gmail.com';
-  const gitHub = 'https://github.com/WaxenOsprey';
-  const linkedIn = 'https://www.linkedin.com/in/paulsamuelcummingdev/';
 
-  return (
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }
+    ,[]);
+
+    const email = 'paulsamuelcummingdev@gmail.com';
+    const gitHub = 'https://github.com/WaxenOsprey';
+    const linkedIn = 'https://www.linkedin.com/in/paulsamuelcummingdev/';
+
+    return (
     <>
       <ContactContainer>
         <Title>Contact</Title>

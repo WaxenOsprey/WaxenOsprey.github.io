@@ -24,7 +24,7 @@ const FooterContainer = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    margin-left: 10%;
+    margin-left: 15%;
     margin-right: 10%;
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -53,7 +53,7 @@ const SideEmail = styled.p`
     padding: 0.3rem;
     line-height: 1.5;
     border-top: 1px solid rgb(203,214,244);
-    /* border-right: 2px solid rgb(203,214,244); */
+    /* border-right: 1px solid rgb(203,214,244); */
     transform: rotate(90deg);
 
     &:hover{
