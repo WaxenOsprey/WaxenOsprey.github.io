@@ -1,10 +1,15 @@
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 
 const SideBar = () => {
+
+    const email = 'paulsamuelcummingdev@gmail.com';
+
+
     return ( 
         <>
             <SideBarContainer>
@@ -20,8 +25,8 @@ const SideBar = () => {
                         </SocialLink>
                     </SocialsListItem>
                     <SocialsListItem>
-                        <SocialLink href='https://www.linkedin.com/in/paulsamuelcummingdev/' target="_blank" rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={faTwitter} style={{ color: "#5cbcb1", height: "3rem", margin: "1rem"  }} />
+                        <SocialLink href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faEnvelope} style={{ color: "#5cbcb1", height: "3rem", margin: "1rem"  }} />
                         </SocialLink>
                     </SocialsListItem>
 
