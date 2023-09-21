@@ -54,7 +54,6 @@ const MapWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-
 `;
 
 const ContactWrapper = styled.div`
@@ -107,7 +106,5 @@ const LinkedInLink = styled.a`
 const GitHubLink = styled.a`
   color: rgb(92, 188, 177);
 `;
-
-
 
 export default Contact;

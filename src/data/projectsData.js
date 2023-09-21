@@ -12,7 +12,7 @@ import {
     gwentishFeatures,
     gwentishTechnologies
 
-} from "../sectionStrings";
+} from "./sectionStrings";
 
 const postgresqlLogo = "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg";
 const pythonLogo = "https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/python/python-original.svg";

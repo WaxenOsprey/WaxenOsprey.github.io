@@ -8,11 +8,8 @@ import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import { Routes, Route } from 'react-router-dom';
 import SideBar from './components/SideBar';
-import projectsData from '../src/components/ProjectsData';
+import projectsData from './data/projectsData';
 import './App.css';
-
-
-
 
 
 function App() {

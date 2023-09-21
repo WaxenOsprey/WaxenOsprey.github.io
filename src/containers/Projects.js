@@ -1,22 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
-import YouTubePlayer from '../components/YouTubePlayer';
+import YouTubePlayer from '../utils/YouTubePlayer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Projects = ({ projects }) => {
 
+    const [selectedProject, setSelectedProject] = useState(null);
 
     useEffect(() => {
         setSelectedProject(projects[0]);
-        console.log(faGithub);
-
-
+        window.scrollTo(0, 0);
     }
     ,[]);
 
-    const [selectedProject, setSelectedProject] = useState(null);
 
     const handleClick = (project) => {
         setSelectedProject(project);
@@ -126,7 +124,7 @@ const Title = styled.p`
     font-size: 4rem; 
     margin: 0;
     padding: 0;
-`
+`;
 
 const ProjectIntro = styled.p`
     color: rgb(92,188,177);
@@ -138,14 +136,14 @@ const ProjectIntro = styled.p`
     line-height: 1.5;
     width: 50%;
     font-style: italic;
-`
+`;
 
 const ProjectTitle = styled.p`
     color: rgb(135,145,174);
     font-size: 4rem;
     margin: 0;
     padding: 0;
-`
+`;
 
 const Message = styled.p`
     color: rgb(92,188,177);
@@ -159,7 +157,7 @@ const Message = styled.p`
     border-right: 2px solid rgb(92,188,177);
     padding-top: 1rem;
     text-align: left;
-`
+`;
 
 const MenuItem = styled.p`
     font-size: 2rem;
@@ -175,14 +173,14 @@ const MenuItem = styled.p`
     &:active {
         color: rgb(92,188,177);
     }
-`
+`;
+
 const ProjectsWrapper = styled.div`
     display: flex;
     flex-direction: row;
 
     margin-top: 2rem;
-`
-
+`;
 
 const ProjectsMenu = styled.div`
     display: flex;
@@ -192,8 +190,7 @@ const ProjectsMenu = styled.div`
     padding: 0;
     list-style-type: none;  
     margin-left: auto;
-    
-    `
+`;
 
 const SelectedProjectContainer = styled.div`
     display: flex;
@@ -201,24 +198,22 @@ const SelectedProjectContainer = styled.div`
     width: 100%;
     align-items: center;
     margin-left: 4rem;
-    
-    `
+`;
 
 const ProjectHeading = styled.p`
     color: rgb(135,145,174)
-    ;`
+`;
 
 const ProjectContent = styled.p`
     color: rgb(203,214,244)
-    ;`
+`;
 
 const ProjectOverViewContainer = styled.div`
     display: flex;
     flex-direction: row;
     margin: 2rem;
     justify-content: center;
-    
-    `
+`;
 
 const ProjectDetailsWrapper = styled.div`
     display: flex;
@@ -226,8 +221,7 @@ const ProjectDetailsWrapper = styled.div`
     text-align: left;
     width: 75%;
     margin-right: 2rem;
-    `;
-
+`;
 
 const GitHubLinkContainer = styled.a`
     color: rgb(92,188,177);
@@ -255,16 +249,13 @@ const GitHubLinkContainer = styled.a`
     }
 `;
 
-
-
 const VideoContainer = styled.div`
-margin-top: 2rem;
-margin-bottom: 2rem;
-border: 2px solid rgb(92,188,177);
-width: 75%;
-height: 20rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 2px solid rgb(92,188,177);
+    width: 75%;
+    height: 20rem;
 `;
-
 
 const Logos = styled.div`
     display: flex;
@@ -280,10 +271,6 @@ const Logo = styled.img`
     height: 5rem;
     width: 5rem;
     margin-right: 2rem;
-
 `;
-
-
-
 
 export default Projects;

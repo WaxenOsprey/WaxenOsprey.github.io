@@ -41,14 +41,14 @@ const Name = styled.p`
     font-size: 5rem; 
     margin: 0;
     padding: 0;
-`
+`;
 
 const Headline = styled.p`
     color: rgb(135,145,174);
     font-size: 4rem;
     margin: 0;
     padding: 0;
-`
+`;
 
 const Message = styled.p`
     color: rgb(135,145,174);
@@ -58,7 +58,7 @@ const Message = styled.p`
     margin-top: 2rem;
     margin-bottom: 2rem;
     line-height: 1.5;
-`
+`;
 
 const ActionButton = styled.button`
     color: rgb(92,188,177);

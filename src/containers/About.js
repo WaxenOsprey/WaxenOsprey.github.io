@@ -1,7 +1,14 @@
 import styled from 'styled-components';
 import profilePic from '../assets/pic5.jpg'
 
+import { useEffect } from 'react';
+
 const About = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
     return ( 
     <>
                 <AboutContainer>
@@ -67,7 +74,6 @@ const UpperWrapper = styled.div`
     flex-direction: column;
     width: 50%;
     justify-content: center;
-
 `;
 
 const UpperContainer = styled.div`
@@ -75,7 +81,6 @@ const UpperContainer = styled.div`
     flex-direction: row-reverse;
     margin-bottom: 2rem;
     justify-content: space-between;
-
 `;
 
 
@@ -84,7 +89,7 @@ const Title = styled.p`
     font-size: 4rem; 
     margin: 0;
     padding: 0;
-;`
+`;
 
 const Message = styled.p`
     color: rgb(135,145,174);
@@ -96,7 +101,7 @@ const Message = styled.p`
     line-height: 1.5;
     border-top: 2px solid rgb(92,188,177);
     border-right: 2px solid rgb(92,188,177);
-`
+`;
 
 const ProfilePic = styled.img`
     height: 400px;
@@ -113,7 +118,6 @@ const AboutSection = styled.p`
     margin-top: 2rem;
     margin-bottom: 2rem;
     line-height: 1.5;
-
-`
+`;
 
 export default About;

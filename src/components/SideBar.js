@@ -37,17 +37,17 @@ const SideBar = () => {
 }
 
 const SideBarContainer = styled.div`
-  position: fixed;
-  top: 50%; /* Center vertically */
-  transform: translateY(-50%); /* Center vertically */
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center; 
-  list-style-type: none;
-  padding: 0;
-  margin-left: 2rem;
+    position: fixed;
+    top: 35%; 
+    transform: translateY(-50%); 
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center; 
+    list-style-type: none;
+    padding: 0;
+    margin-left: 2rem;
 `;
 
 const SocialsList = styled.ul`
