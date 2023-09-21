@@ -19,7 +19,7 @@ const NavBar = () => {
                     <SpanNumber>03. </SpanNumber>
                     <NavListLink to="/contact">Contact</NavListLink>
                 </NavListItem>
-                <CVLink href="/paulsamuelcumming.pdf" download>CV/Resume</CVLink>
+                <CVLink href="/paulsamuelcumming.pdf" download>CV/Résumé</CVLink>
             </NavList>
         </NavContainer>
 

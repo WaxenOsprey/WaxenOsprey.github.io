@@ -5,7 +5,8 @@ import About from './containers/About';
 import Projects from './containers/Projects';
 import Contact from './containers/Contact';
 import NavBar from './components/NavBar';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import Footer from './components/Footer';
+import { Routes, Route } from 'react-router-dom';
 import SideBar from './components/SideBar';
 import projectsData from '../src/components/ProjectsData';
 import './App.css';
@@ -35,6 +36,8 @@ function App() {
             <Route path="/contact" element={<Contact/>}/>
           </Routes>
         </AppContainer>
+        <Footer/>
+
     </>
   );
 }
@@ -42,7 +45,7 @@ function App() {
 const AppContainer = styled.div`
   display: flex;
   flex-direction: row;
-  margin-left: 8rem;
+  margin-left: 10%;
 `;
 
 

@@ -9,7 +9,7 @@ export const solarSystemFeatures = `
 
 - **Simple Login System:** A user-friendly login page allows users to track their exploration journey and view comprehensive 'system reports.'
 
-- **RESTful Route Convention:** Implemented RESTful routing and a cleverly nested route structure for moons.
+- **RESTful Route Convention:** Implemented RESTful routing and a nested route structure for moons.
 
 - **Data Integrity:** Leverage PostgreSQL to ensure data integrity, and engage in efficient database interactions using Psycopg and Python.`;
 

@@ -165,6 +165,8 @@ const MenuItem = styled.p`
     font-size: 2rem;
     margin-bottom: 10px;
     color: ${props => props.isSelected ? 'rgb(92,188,177)' : 'rgb(135,145,174)'};
+    /* text-decoration: ${props => props.isSelected ? 'overline' : 'none'}; */
+
     cursor: pointer;
 
     &:hover {
@@ -259,7 +261,7 @@ const VideoContainer = styled.div`
 margin-top: 2rem;
 margin-bottom: 2rem;
 border: 2px solid rgb(92,188,177);
-width: 50%;
+width: 75%;
 height: 20rem;
 `;
 
