@@ -48,6 +48,10 @@ const SideBarContainer = styled.div`
     list-style-type: none;
     padding: 0;
     margin-left: 2rem;
+
+    @media (max-width: 768px) {
+    left: 5%; 
+  }
 `;
 
 const SocialsList = styled.ul`

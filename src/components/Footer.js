@@ -30,13 +30,24 @@ const FooterContainer = styled.div`
     margin-bottom: 2rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    width: 100%;
+    width: 100vh;
+
+    @media (max-width: 768px){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
 `;
 
 const FooterContent = styled.p`
     color: rgb(203,214,244);
     border-bottom: 1px solid rgb(203,214,244);
     padding: 0.5rem;
+
+    @media (max-width: 768px){
+        text-align: center;
+    }
 `;
 
 const SideEmailContainer = styled.div`
@@ -45,6 +56,14 @@ const SideEmailContainer = styled.div`
     justify-content: flex-end;
     width: 100%;
     margin-top: auto;
+
+    @media (max-width: 768px){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
 `;
 const SideEmail = styled.p`
     color: rgb(203,214,244);
@@ -59,6 +78,14 @@ const SideEmail = styled.p`
     &:hover{
         border-top: 1px solid rgb(92,188,177);
     }
+
+    @media (max-width: 768px){
+        transform: none;
+        border-top: none;
+        padding: 0;
+        font-size: 0.8rem;
+        margin-top: 1rem;
+    }
 `;
 
 const Email = styled.a`
@@ -67,6 +94,10 @@ const Email = styled.a`
 
     &:hover {
         color: rgb(92,188,177);
+    }
+
+    @media (max-width: 768px){
+        font-size: 0.8rem;
     }
 `
  

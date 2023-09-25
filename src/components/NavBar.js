@@ -38,6 +38,13 @@
         z-index: 1;
         background-color: rgba(11,25,48, 0.7);
         padding: 1rem;
+
+        @media (max-width: 768px) {
+            margin: 0;
+            padding: 0.5rem;
+
+
+        }
     `;
 
     const HomeLink = styled(Link)`
@@ -61,6 +68,13 @@
             background-color: rgb(203,214,244);
 
         }
+
+        @media (max-width: 768px) {
+            font-size: 1rem;
+            padding: 0.25rem;
+
+
+        }
     `;
 
     const NavList = styled.ul`
@@ -71,6 +85,11 @@
         list-style-type: none;
         margin: 0;
         padding: 0;
+
+        @media (max-width: 768px) {
+            font-size: 1rem;
+            padding: 0.3rem;
+        }
     `;
 
     const NavListItem = styled.li`
@@ -83,6 +102,11 @@
         margin-left: 2rem;
         margin-right: 2rem;
         align-items: center;
+
+        @media (max-width: 768px) {
+            font-size: 1rem;
+            padding: 0.3rem;
+        }
     `;
 
     const NavListLink = styled(Link)`
@@ -95,11 +119,21 @@
             &:hover {
             color: rgb(92,188,177);
         }
+
+        @media (max-width: 768px) {
+            font-size: 1rem;
+            padding: 0.3rem;
+        }
     `;
 
     const SpanNumber = styled.span`
         color: rgb(92,188,177);
         margin-right: 0.5rem;
+
+        @media (max-width: 768px) {
+            font-size: 1rem;
+            padding: 0.3rem;
+        }
     `;
 
     const CVLink = styled.a`
@@ -113,7 +147,7 @@
         height: 2rem;
         width: 6rem;
         border: 2px solid rgb(92,188,177);
-        border-radius: 10px;
+        border-radius: 5px;
         color: rgb(92,188,177);
         display: flex;
         justify-content: center;
@@ -122,6 +156,11 @@
             &:hover {
             color: rgb(203,214,244);
             border: 2px solid rgb(203,214,244);
+        }
+
+        @media (max-width: 768px) {
+            font-size: 1rem;
+            padding: 0.3rem;
         }
     `;
 

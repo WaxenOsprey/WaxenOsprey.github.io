@@ -47,24 +47,13 @@ const Projects = ({ projects }) => {
                                 <YouTubePlayer videoId={selectedProject.video} /> 
                             </VideoContainer>
 
-                            <ProjectOverViewContainer>
+                            <ProjectOverViewContainer> 
                                 <ProjectDetailsWrapper>
                                     <ProjectHeading>{selectedProject.sections[1].title}</ProjectHeading>
                                     <ProjectContent>
                                         <ReactMarkdown>
                                             {selectedProject.sections[1].content}
                                         </ReactMarkdown>
-                                    </ProjectContent>
-                                </ProjectDetailsWrapper>
-
-                            </ProjectOverViewContainer>
-
-                            <ProjectOverViewContainer>
-                                
-                                <ProjectDetailsWrapper>
-                                    <ProjectHeading>{selectedProject.sections[2].title}</ProjectHeading>
-                                    <ProjectContent>
-                                        <ReactMarkdown source={selectedProject.sections[2].content} renderers={CustomRenderer} >{selectedProject.sections[2].content}</ReactMarkdown>
                                     </ProjectContent>
                                 </ProjectDetailsWrapper>
 
@@ -88,6 +77,17 @@ const Projects = ({ projects }) => {
                                 </ProjectDetailsWrapper>
 
                             </ProjectOverViewContainer>
+                            <ProjectOverViewContainer>
+                                
+                                <ProjectDetailsWrapper>
+                                    <ProjectHeading>{selectedProject.sections[2].title}</ProjectHeading>
+                                    <ProjectContent>
+                                        <ReactMarkdown source={selectedProject.sections[2].content} renderers={CustomRenderer} >{selectedProject.sections[2].content}</ReactMarkdown>
+                                    </ProjectContent>
+                                </ProjectDetailsWrapper>
+
+                            </ProjectOverViewContainer>
+
                             <GitHubLinkContainer href={selectedProject.gitHub} target='blank'>
                                 GITHUB REPO
                                     <FontAwesomeIcon icon={faGithub} style={{ marginLeft: "10%"}} />
@@ -114,9 +114,10 @@ const ProjectsContainer = styled.div`
     display: flex;
     flex-direction: column;
     /* margin: 2rem; */
-    margin-left: 8rem;
-    margin-right: 8rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
     width: 100%;
+    flex-grow: 1;
 `;
 
 const Title = styled.p`
