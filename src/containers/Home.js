@@ -34,10 +34,11 @@ const HomeContainer = styled.div`
   flex-grow: 1;
 
   @media (max-width: 768px) {
-    margin: 10vh auto; 
     padding: 0;
+    padding: 2rem; /* Add padding to center content vertically */
     justify-content: center;
     align-items: center;
+    text-align: center; /* Center text within the container */
     /* max-width: 100vh; */
 
   }
@@ -58,6 +59,11 @@ const Name = styled.p`
 
   @media (max-width: 768px) {
     font-size: 4rem; 
+    white-space: nowrap;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+
   }
 `;
 
@@ -68,7 +74,7 @@ const Headline = styled.p`
   padding: 0;
 
   @media (max-width: 768px) {
-    font-size: 3rem; 
+    font-size: 2rem; 
   }
 `;
 

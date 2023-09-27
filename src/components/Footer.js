@@ -33,10 +33,7 @@ const FooterContainer = styled.div`
     width: 100vh;
 
     @media (max-width: 768px){
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: auto;
+        display: none;
     }
 `;
 
@@ -58,9 +55,7 @@ const SideEmailContainer = styled.div`
     margin-top: auto;
 
     @media (max-width: 768px){
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        display: none;
     }
 
     

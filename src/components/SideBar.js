@@ -50,7 +50,7 @@ const SideBarContainer = styled.div`
     margin-left: 2rem;
 
     @media (max-width: 768px) {
-    left: 5%; 
+    display: none;
   }
 `;
 
