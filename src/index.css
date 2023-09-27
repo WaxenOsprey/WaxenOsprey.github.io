@@ -27,9 +27,7 @@ body {
 }
 
 
-
-
-/* #root {
+#root {
   flex-grow: 1;
   display: flex;
   justify-content: center;
@@ -45,7 +43,7 @@ body {
   
 
 
-  } */
+  } 
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

@@ -30,8 +30,10 @@ const HomeContainer = styled.div.attrs({ 'data-display-name': 'HomeContainer' })
   margin-top: 2rem;
   margin-left: 4rem;
   margin-right: 4rem;
-  margin-bottom: 1rem;
-  flex-grow: 1;
+  margin-bottom: 0;
+  /* width: 100vw;
+  height: 100vh; */
+
 
   @media (max-width: 768px) {
     padding: 0;
