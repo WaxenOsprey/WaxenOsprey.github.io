@@ -20,7 +20,7 @@ const Footer = () => {
      );
 }
 
-const FooterContainer = styled.div`
+const FooterContainer = styled.div.attrs({ 'data-display-name': 'FooterContainer' })`
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -37,7 +37,7 @@ const FooterContainer = styled.div`
     }
 `;
 
-const FooterContent = styled.p`
+const FooterContent = styled.p.attrs({ 'data-display-name': 'FooterContent' })`
     color: rgb(203,214,244);
     border-bottom: 1px solid rgb(203,214,244);
     padding: 0.5rem;
@@ -47,7 +47,7 @@ const FooterContent = styled.p`
     }
 `;
 
-const SideEmailContainer = styled.div`
+const SideEmailContainer = styled.div.attrs({ 'data-display-name': 'SideEmailContainer' })`
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -60,7 +60,7 @@ const SideEmailContainer = styled.div`
 
     
 `;
-const SideEmail = styled.p`
+const SideEmail = styled.p.attrs({ 'data-display-name': 'SideEmail' })`
     color: rgb(203,214,244);
     font-size: 1rem;
     padding-right: 1rem;
@@ -83,7 +83,7 @@ const SideEmail = styled.p`
     }
 `;
 
-const Email = styled.a`
+const Email = styled.a.attrs({ 'data-display-name': 'Email' })`
     text-decoration: none;
     color: rgb(203,214,244);
 

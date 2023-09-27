@@ -38,7 +38,7 @@ const Contact = () => {
   );
 };
 
-const ContactContainer = styled.div`
+const ContactContainer = styled.div.attrs({ 'data-display-name': 'ContactContainer' })`
   display: flex;
   flex-direction: column;
   margin-left: 4rem;
@@ -54,7 +54,7 @@ const ContactContainer = styled.div`
   }
 `;
 
-const Title = styled.p`
+const Title = styled.p.attrs({ 'data-display-name': 'Title' })`
   color: rgb(203, 214, 244);
   font-size: 4rem;
   margin: 0;
@@ -65,7 +65,7 @@ const Title = styled.p`
   }
 `;
 
-const MapWrapper = styled.div`
+const MapWrapper = styled.div.attrs({ 'data-display-name': 'MapWrapper' })`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -76,17 +76,18 @@ const MapWrapper = styled.div`
   }
 `;
 
-const ContactWrapper = styled.div`
+const ContactWrapper = styled.div.attrs({ 'data-display-name': 'ContactWrapper' })`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 
   @media (max-width: 768px) {
     align-items: center;
+    margin: 1rem;
   }
 `;
 
-const ContactDetail = styled.div`
+const ContactDetail = styled.div.attrs({ 'data-display-name': 'ContactDetail' })`
   display: flex;
   align-items: center;
 
@@ -96,7 +97,7 @@ const ContactDetail = styled.div`
   }
 `;
 
-const WorldMap = styled.img`
+const WorldMap = styled.img.attrs({ 'data-display-name': 'WorldMap' })`
   width: 70%;
   height: auto;
   margin-top: 2rem;
@@ -109,7 +110,7 @@ const WorldMap = styled.img`
   }
 `;
 
-const Message = styled.p`
+const Message = styled.p.attrs({ 'data-display-name': 'Message' })`
   color: rgb(92, 188, 177);
   font-size: 1rem;
   margin: 0;
@@ -128,7 +129,7 @@ const Message = styled.p`
   }
 `;
 
-const ContactHeading = styled.p`
+const ContactHeading = styled.p.attrs({ 'data-display-name': 'ContactHeading' })`
   color: rgb(203, 214, 244);
   margin-right: 1rem;
 
@@ -137,7 +138,7 @@ const ContactHeading = styled.p`
   }
 `;
 
-const EmailLink = styled.a`
+const EmailLink = styled.a.attrs({ 'data-display-name': 'EmailLink' })`
   color: rgb(92, 188, 177);
 
   @media (max-width: 768px) {
@@ -145,7 +146,7 @@ const EmailLink = styled.a`
   }
 `;
 
-const LinkedInLink = styled.a`
+const LinkedInLink = styled.a.attrs({ 'data-display-name': 'LinkedInLink' })`
   color: rgb(92, 188, 177);
 
   @media (max-width: 768px) {
@@ -153,7 +154,7 @@ const LinkedInLink = styled.a`
   }
 `;
 
-const GitHubLink = styled.a`
+const GitHubLink = styled.a.attrs({ 'data-display-name': 'GitHubLink' })`
   color: rgb(92, 188, 177);
 
   @media (max-width: 768px) {

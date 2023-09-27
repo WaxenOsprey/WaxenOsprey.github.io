@@ -40,34 +40,37 @@ const About = () => {
   );
 };
 
-const AboutContainer = styled.div`
+const AboutContainer = styled.div.attrs({ 'data-display-name': 'AboutContainer' })`
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  padding: 0 2rem;
+  margin-bottom: 8rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  padding: 4rem;
   width: 100%;
 
   @media (max-width: 768px) {
     padding: 1rem;
+    margin: 0;
     height: 100%;
     width: 100%;
   }
 `;
 
-const AboutWrapper = styled.div`
+const AboutWrapper = styled.div.attrs({ 'data-display-name': 'AboutWrapper' })`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 `;
 
-const UpperWrapper = styled.div`
+const UpperWrapper = styled.div.attrs({ 'data-display-name': 'UpperWrapper' })`
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
-const UpperContainer = styled.div`
+const UpperContainer = styled.div.attrs({ 'data-display-name': 'UpperContainer' })`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,7 +82,7 @@ const UpperContainer = styled.div`
   }
 `;
 
-const Title = styled.p`
+const Title = styled.p.attrs({ 'data-display-name': 'Title' })`
   color: rgb(203, 214, 244);
   font-size: 4rem;
   margin: 0;
@@ -90,10 +93,9 @@ const Title = styled.p`
     }
 `;
 
-const Message = styled.p`
+const Message = styled.p.attrs({ 'data-display-name': 'Message' })`
   color: rgb(135, 145, 174);
   font-size: 1rem;
-  margin: 0;
   padding: 0;
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -103,7 +105,7 @@ const Message = styled.p`
   border-right: 2px solid rgb(92, 188, 177);
 `;
 
-const ProfilePic = styled.img`
+const ProfilePic = styled.img.attrs({ 'data-display-name': 'ProfilePic' })`
   height: 400px;
   width: 400px;
   border-radius: 50%;
@@ -116,7 +118,7 @@ const ProfilePic = styled.img`
     }
 `;
 
-const AboutSection = styled.p`
+const AboutSection = styled.p.attrs({ 'data-display-name': 'AboutSection' })`
   color: rgb(203, 214, 244);
   font-size: 1rem;
   margin: 0;
@@ -130,7 +132,7 @@ const AboutSection = styled.p`
     }
 `;
 
-const AboutSectionExtra = styled.p`
+const AboutSectionExtra = styled.p.attrs({ 'data-display-name': 'AboutSectionExtra' })`
   color: rgb(203, 214, 244);
   font-size: 1rem;
   margin: 0;
@@ -141,10 +143,9 @@ const AboutSectionExtra = styled.p`
   
 `;
 
-const AboutSectionExtraLast = styled.p`
+const AboutSectionExtraLast = styled.p.attrs({ 'data-display-name': 'AboutSectionExtraLast' })`
   color: rgb(203, 214, 244);
   font-size: 1rem;
-  margin: 0;
   padding: 0;
   margin-top: 2rem;
   margin-bottom: 2rem;

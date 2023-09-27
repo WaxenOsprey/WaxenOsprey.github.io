@@ -36,7 +36,7 @@ const SideBar = () => {
      );
 }
 
-const SideBarContainer = styled.div`
+const SideBarContainer = styled.div.attrs({ 'data-display-name': 'SideBarContainer' })`
     position: fixed;
     top: 35%; 
     transform: translateY(-50%); 
@@ -54,7 +54,7 @@ const SideBarContainer = styled.div`
   }
 `;
 
-const SocialsList = styled.ul`
+const SocialsList = styled.ul.attrs({ 'data-display-name': 'SocialsList' })`
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -64,7 +64,7 @@ const SocialsList = styled.ul`
     padding: 0;
 `;
 
-const SocialsListItem = styled.li`
+const SocialsListItem = styled.li.attrs({ 'data-display-name': 'SocialsListItem' })`
     color: rgb(203,214,244);
     font-size: 1.5rem;
     margin: 0;
@@ -80,7 +80,7 @@ const SocialsListItem = styled.li`
     }
 `;
 
-const SocialLink = styled.a`
+const SocialLink = styled.a.attrs({ 'data-display-name': 'SocialLink' })`
     color: rgb(203,214,244);
     font-size: 1.5rem;
     margin: 0;

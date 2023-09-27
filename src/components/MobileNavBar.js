@@ -49,7 +49,7 @@ const MobileNavBar = () => {
      );
 }
 
-const MobileNavWrapper = styled.div`
+const MobileNavWrapper = styled.div.attrs({ 'data-display-name': 'MobileNavWrapper' })`
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -61,7 +61,7 @@ const MobileNavWrapper = styled.div`
 
     `
 
-const BurgerIcon = styled.div`
+const BurgerIcon = styled.div.attrs({ 'data-display-name': 'BurgerIcon' })`
     display: none;
 
     @media (max-width: 768px) {
@@ -72,7 +72,7 @@ const BurgerIcon = styled.div`
     }
 `;
 
-const MobileNavContainer = styled.div`
+const MobileNavContainer = styled.div.attrs({ 'data-display-name': 'MobileNavContainer' })`
 display: none;
 
 @media (max-width: 768px) {
@@ -82,19 +82,19 @@ display: none;
 }
 `;
 
-const MobileNavList = styled.ul`
+const MobileNavList = styled.ul.attrs({ 'data-display-name': 'MobileNavList' })`
     list-style-type: none;
     margin-top: 2rem;
     padding: 0;
     text-align: right;
 `;
 
-const MobileNavItem = styled.li`
+const MobileNavItem = styled.li.attrs({ 'data-display-name': 'MobileNavItem' })`
     margin-bottom: 1rem;
 
 `;
 
-const MobileNavListLink = styled(Link)`
+const MobileNavListLink = styled(Link).attrs({ 'data-display-name': 'MobileNavListLink' })`
     color: rgb(203, 214, 244);
     text-decoration: none;
     font-size: 1.5rem;
@@ -104,7 +104,7 @@ const MobileNavListLink = styled(Link)`
     }
 `;
 
-const MobileCVLink = styled.a`
+const MobileCVLink = styled.a.attrs({ 'data-display-name': 'MobileCVLink' })`
     color: rgb(11, 25, 48);
     text-decoration: none;
     font-size: 1.5rem;

@@ -24,7 +24,7 @@ const Home = () => {
   );
 };
 
-const HomeContainer = styled.div`
+const HomeContainer = styled.div.attrs({ 'data-display-name': 'HomeContainer' })`
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
@@ -44,14 +44,14 @@ const HomeContainer = styled.div`
   }
 `;
 
-const Hi = styled.p`
+const Hi = styled.p.attrs({ 'data-display-name': 'Hi' })`
   color: rgb(92, 188, 177);
   font-size: 1rem;
   margin: 0;
   padding: 0;
 `;
 
-const Name = styled.p`
+const Name = styled.p.attrs({ 'data-display-name': 'Name' })`
   color: rgb(203, 214, 244);
   font-size: 6rem;
   margin: 0;
@@ -67,7 +67,7 @@ const Name = styled.p`
   }
 `;
 
-const Headline = styled.p`
+const Headline = styled.p.attrs({ 'data-display-name': 'Headline' })`
   color: rgb(135, 145, 174);
   font-size: 4rem;
   margin: 0;
@@ -78,7 +78,7 @@ const Headline = styled.p`
   }
 `;
 
-const Message = styled.p`
+const Message = styled.p.attrs({ 'data-display-name': 'Message' })`
   color: rgb(135, 145, 174);
   font-size: 1rem;
   padding: 0;
@@ -93,7 +93,7 @@ const Message = styled.p`
   }
 `;
 
-const Craneware = styled.a`
+const Craneware = styled.a.attrs({ 'data-display-name': 'Craneware' })`
   color: rgb(92, 188, 177);
   text-decoration: none;
   font-weight: bold;
@@ -103,7 +103,7 @@ const Craneware = styled.a`
   }
 `;
 
-const ActionButton = styled.button`
+const ActionButton = styled.button.attrs({ 'data-display-name': 'ActionButton' })`
   color: rgb(92, 188, 177);
   font-size: 1rem;
   text-decoration: none;
