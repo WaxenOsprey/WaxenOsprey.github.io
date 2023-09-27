@@ -35,6 +35,15 @@ const Projects = ({ projects }) => {
         <ProjectsContainer>
             <Title>Projects</Title>
             <Message>Select a project:</Message>
+            <ProjectsMobileMenu>
+                    {projects.map((project) => (
+                        <div key={project.id} onClick={() => handleClick(project)}>
+                            <MenuItem isSelected={project.name === (selectedProject && selectedProject.name)}>
+                                {project.name}
+                            </MenuItem>
+                        </div>
+                    ))}
+                </ProjectsMobileMenu>
 
             <ProjectsWrapper>
                 <SelectedProjectContainer>
@@ -110,6 +119,21 @@ const Projects = ({ projects }) => {
     );
 }
  
+const ProjectsMobileMenu = styled.div`
+    display: none;
+
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid rgb(92,188,177);
+    }
+`;
+
 const ProjectsContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -118,6 +142,16 @@ const ProjectsContainer = styled.div`
     margin-right: 4rem;
     width: 100%;
     flex-grow: 1;
+
+    @media (max-width: 768px) {
+        width: 100vw;
+        height: 100vh;
+        margin: 2rem;
+        padding: 0;
+        /* justify-content: center;
+        align-items: center; */
+
+    }
 `;
 
 const Title = styled.p`
@@ -158,6 +192,14 @@ const Message = styled.p`
     border-right: 2px solid rgb(92,188,177);
     padding-top: 1rem;
     text-align: left;
+
+    @media (max-width: 768px) {
+        border-top: 2px solid rgb(92,188,177);
+        border-right: none;
+        width: 100%;
+
+
+    }
 `;
 
 const MenuItem = styled.p`
@@ -191,12 +233,17 @@ const ProjectsMenu = styled.div`
     padding: 0;
     list-style-type: none;  
     margin-left: auto;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
 `;
 
 const SelectedProjectContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
+    /* height: 100%; */
     align-items: center;
     margin-left: 4rem;
 `;
@@ -214,6 +261,7 @@ const ProjectOverViewContainer = styled.div`
     flex-direction: row;
     margin: 2rem;
     justify-content: center;
+    width: 100%;
 `;
 
 const ProjectDetailsWrapper = styled.div`
@@ -256,6 +304,12 @@ const VideoContainer = styled.div`
     border: 2px solid rgb(92,188,177);
     width: 75%;
     height: 20rem;
+
+    @media (max-width: 768px) {
+
+        width: 100%;
+        height: 20rem;
+    }
 `;
 
 const Logos = styled.div`
@@ -272,6 +326,11 @@ const Logo = styled.img`
     height: 5rem;
     width: 5rem;
     margin-right: 2rem;
+
+    @media (max-width: 768px) {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
 `;
 
 export default Projects;

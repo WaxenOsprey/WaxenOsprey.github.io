@@ -1,26 +1,11 @@
     import styled from 'styled-components';
     import { Link } from 'react-router-dom';
-    import { useState } from 'react';
-    import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-    import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-    
+
 
     const NavBar = () => {
 
-        const [menuOpen, setMenuOpen] = useState(false);
-
-        const toggleMenu = () => {
-            setMenuOpen(!menuOpen);
-        }
-
         return ( 
             <>
-                <BurgerIcon onClick={toggleMenu}>
-                    <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} 
-                    style={{ color: "#5cbcb1", height: "3rem", margin: "1rem"  }}  
-                    />
-                </BurgerIcon>
-
                 <NavContainer>
                     <HomeLink to="/">PC</HomeLink>
                     <NavList>
@@ -43,18 +28,6 @@
         );
     }
 
-    const BurgerIcon = styled.div`
-        display: none;
-
-        @media (max-width: 768px) {
-            display: block;
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            cursor: pointer;
-            z-index: 2;
-        }
-    `;
 
     const NavContainer = styled.div`
         display: flex;

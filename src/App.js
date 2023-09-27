@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import SideBar from './components/SideBar';
 import projectsData from './data/projectsData';
 import './App.css';
+import MobileNavBar from './components/MobileNavBar';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
     <>
         <MainContainer>
           <NavBar/>
+          <MobileNavBar/>
           <AppContainer>
             <SideBar/>
             <Routes>
@@ -46,6 +48,8 @@ const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  min-height: 100vh;
+  /* overflow-x: hidden; */
 
   @media (max-width: 768px) {
     margin: 0;
@@ -54,6 +58,7 @@ const MainContainer = styled.div`
     align-items: center;
     flex-direction: column;
     width: 100%;
+    height: 100vh;
     /* flex-grow: 1; */
   }
   
@@ -72,6 +77,7 @@ const AppContainer = styled.div`
     flex-direction: column;
     align-items: center;
     flex-grow: 1;
+    height: 100vh;
   }
 
 `;

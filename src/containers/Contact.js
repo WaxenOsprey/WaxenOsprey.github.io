@@ -15,7 +15,7 @@ const Contact = () => {
     <>
       <ContactContainer>
         <Title>Contact</Title>
-        <Message>I am based in <strong>Edinburgh</strong>, United Kingdom</Message>
+        <Message>I am based in <strong>Edinburgh, United Kingdom</strong>. Feel free to contact me using the links below!</Message>
         <MapWrapper>
           <WorldMap src={worldMap} alt="world map" />
         </MapWrapper>
@@ -48,8 +48,9 @@ const ContactContainer = styled.div`
   flex-grow: 1;
 
   @media (max-width: 768px) {
-    margin-left: 2rem;
-    margin-right: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    align-items: center;
   }
 `;
 
@@ -123,6 +124,7 @@ const Message = styled.p`
 
   @media (max-width: 768px) {
     font-size: 0.8rem;
+    border-right: none;
   }
 `;
 
