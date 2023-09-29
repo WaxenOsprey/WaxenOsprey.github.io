@@ -109,7 +109,7 @@ const projectsData = [
             },
           ],
           logos: phoenixTraderLogos,
-          video: "wmIUW2Ory1Q",
+          video: "Hx6FJoGVYc4",
           gitHub: "https://github.com/WaxenOsprey/PhoenixTrader"
     },
     {
@@ -134,7 +134,7 @@ const projectsData = [
             },
           ],
           logos: gwentishLogos,
-          video: "qjPLsjE5Uu4",
+          video: "UtxtS1FAiGI",
           gitHub: "https://github.com/WaxenOsprey/Gwentish"
     }
 ]
