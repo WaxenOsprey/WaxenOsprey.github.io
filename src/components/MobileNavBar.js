@@ -13,6 +13,10 @@ const MobileNavBar = () => {
         setMenuOpen(!menuOpen);
     }
 
+    const closeMenu = () => {
+        setMenuOpen(false);
+    };
+
 
     return ( 
         <>      
@@ -25,21 +29,21 @@ const MobileNavBar = () => {
 
                     <MobileNavContainer menuOpen={menuOpen}>
                         <MobileNavList>
-                        <MobileNavItem>
-                            <MobileNavListLink to="/">Home</MobileNavListLink>
-                        </MobileNavItem>
-                        <MobileNavItem>
-                            <MobileNavListLink to="/about">About</MobileNavListLink>
-                        </MobileNavItem>
-                        <MobileNavItem>
-                            <MobileNavListLink to="/projects">Projects</MobileNavListLink>
-                        </MobileNavItem>
-                        <MobileNavItem>
-                            <MobileNavListLink to="/contact">Contact</MobileNavListLink>
-                        </MobileNavItem>
-                        <MobileNavItem>
-                            <MobileCVLink href="/paulsamuelcumming.pdf" download>CV/Résumé</MobileCVLink>
-                        </MobileNavItem>
+                            <MobileNavItem>
+                                <MobileNavListLink to="/" onClick={closeMenu}>Home</MobileNavListLink>
+                            </MobileNavItem>
+                            <MobileNavItem>
+                                <MobileNavListLink to="/about" onClick={closeMenu}>About</MobileNavListLink>
+                            </MobileNavItem>
+                            <MobileNavItem>
+                                <MobileNavListLink to="/projects" onClick={closeMenu}>Projects</MobileNavListLink>
+                            </MobileNavItem>
+                            <MobileNavItem>
+                                <MobileNavListLink to="/contact" onClick={closeMenu}>Contact</MobileNavListLink>
+                            </MobileNavItem>
+                            <MobileNavItem>
+                                <MobileCVLink href="/paulsamuelcumming.pdf" download>CV/Résumé</MobileCVLink>
+                            </MobileNavItem>
                         </MobileNavList>
                     </MobileNavContainer>
 
@@ -51,12 +55,17 @@ const MobileNavBar = () => {
 
 const MobileNavWrapper = styled.div.attrs({ 'data-display-name': 'MobileNavWrapper' })`
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     width: 100%;
+    height: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    margin-top: 5rem;
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    background-color: rgba(11, 25, 48);
+
+
     /* background-color: grey;  */
 
     `
@@ -65,10 +74,10 @@ const BurgerIcon = styled.div.attrs({ 'data-display-name': 'BurgerIcon' })`
     display: none;
 
     @media (max-width: 768px) {
-        display: block;
-        margin-left: 3rem;
-
+        display: flex;
         cursor: pointer;
+
+
     }
 `;
 
@@ -77,16 +86,17 @@ display: none;
 
 @media (max-width: 768px) {
   display: ${(props) => (props.menuOpen ? 'block' : 'none')};
-  padding: 2rem;
-  margin-top: 2rem;
+  /* padding: 2rem;
+  margin-top: 6rem; */
 }
 `;
 
 const MobileNavList = styled.ul.attrs({ 'data-display-name': 'MobileNavList' })`
     list-style-type: none;
     margin-top: 2rem;
+    margin-left
     padding: 0;
-    text-align: right;
+    text-align: left;
 `;
 
 const MobileNavItem = styled.li.attrs({ 'data-display-name': 'MobileNavItem' })`
@@ -105,7 +115,7 @@ const MobileNavListLink = styled(Link).attrs({ 'data-display-name': 'MobileNavLi
 `;
 
 const MobileCVLink = styled.a.attrs({ 'data-display-name': 'MobileCVLink' })`
-    color: rgb(11, 25, 48);
+    color: rgb(203, 214, 244);
     text-decoration: none;
     font-size: 1.5rem;
     display: block;

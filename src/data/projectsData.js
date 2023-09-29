@@ -134,7 +134,7 @@ const projectsData = [
             },
           ],
           logos: gwentishLogos,
-          video: "Zx98fQdlp_0",
+          video: "qjPLsjE5Uu4",
           gitHub: "https://github.com/WaxenOsprey/Gwentish"
     }
 ]

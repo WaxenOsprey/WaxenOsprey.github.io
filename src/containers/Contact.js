@@ -44,8 +44,6 @@ const ContactContainer = styled.div.attrs({ 'data-display-name': 'ContactContain
   margin-left: 4rem;
   margin-right: 4rem;
   width: 100%;
-  height: 100%;
-  flex-grow: 1;
 
   @media (max-width: 768px) {
     padding-left: 2rem;

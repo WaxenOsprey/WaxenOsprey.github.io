@@ -129,12 +129,13 @@ const ProjectsContainer = styled.div`
   margin-left: 4rem;
   margin-right: 4rem;
   width: 100%;
-  flex-grow: 1;
+  /* flex-grow: 1; */
 
   @media (max-width: 768px) {
     width: 100vw;
-    height: 100vh;
-    margin: 2rem;
+    max-height: 100vh;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     padding: 0;
   }
 `;
@@ -285,7 +286,8 @@ const VideoContainer = styled.div.attrs({ 'data-display-name': 'VideoContainer' 
   margin-top: 2rem;
   margin-bottom: 2rem;
   border: 2px solid rgb(92, 188, 177);
-  width: 75%;
+  position: relative;
+  width: 30rem;
   height: 20rem;
 
   @media (max-width: 768px) {
@@ -301,12 +303,14 @@ const Logos = styled.div.attrs({ 'data-display-name': 'Logos' })`
   margin-bottom: 2rem;
   width: 100%;
   padding: 2rem;
+  flex-wrap: wrap;
 `;
 
 const Logo = styled.img.attrs({ 'data-display-name': 'Logo' })`
   height: 5rem;
   width: 5rem;
   margin-right: 2rem;
+  margin-bottom: 2rem;
 
   @media (max-width: 768px) {
     height: 2.5rem;
