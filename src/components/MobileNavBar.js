@@ -94,7 +94,8 @@ display: none;
 const MobileNavList = styled.ul.attrs({ 'data-display-name': 'MobileNavList' })`
     list-style-type: none;
     margin-top: 2rem;
-    margin-left
+    margin-bottom: 2rem;
+    margin-left: 2rem;
     padding: 0;
     text-align: left;
 `;

@@ -98,7 +98,7 @@ const Projects = ({ projects }) => {
           {projects.map((project) => (
             <div key={project.id} onClick={() => handleClick(project)}>
               <MenuItem isSelected={project.name === (selectedProject && selectedProject.name)}>
-                {project.name}
+                {project.name + "-"}
               </MenuItem>
             </div>
           ))}
@@ -136,6 +136,8 @@ const ProjectsContainer = styled.div`
     max-height: 100vh;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    margin-left: 0;
+    margin-right: 4rem;
     padding: 0;
   }
 `;
@@ -161,6 +163,11 @@ const ProjectIntro = styled.p.attrs({ 'data-display-name': 'ProjectIntro' })`
   line-height: 1.5;
   width: 50%;
   font-style: italic;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        padding: 5%;
+    }
 `;
 
 const ProjectTitle = styled.p.attrs({ 'data-display-name': 'ProjectTitle' })`
@@ -168,6 +175,10 @@ const ProjectTitle = styled.p.attrs({ 'data-display-name': 'ProjectTitle' })`
   font-size: 4rem;
   margin: 0;
   padding: 0;
+
+    @media (max-width: 768px) {
+        font-size: 2rem;
+    }
 `;
 
 const Message = styled.p.attrs({ 'data-display-name': 'Message' })`
@@ -186,7 +197,8 @@ const Message = styled.p.attrs({ 'data-display-name': 'Message' })`
   @media (max-width: 768px) {
     border-top: 2px solid rgb(92, 188, 177);
     border-right: none;
-    width: 100%;
+    width: 100vw;
+    text-align: center;
   }
 `;
 
@@ -254,6 +266,13 @@ const ProjectDetailsWrapper = styled.div.attrs({ 'data-display-name': 'ProjectDe
   text-align: left;
   width: 75%;
   margin-right: 2rem;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        margin-right: 0;
+        align-items: center;
+    }
+
 `;
 
 const GitHubLinkContainer = styled.a.attrs({ 'data-display-name': 'GitHubLinkContainer' })`
@@ -304,6 +323,11 @@ const Logos = styled.div.attrs({ 'data-display-name': 'Logos' })`
   width: 100%;
   padding: 2rem;
   flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 const Logo = styled.img.attrs({ 'data-display-name': 'Logo' })`
