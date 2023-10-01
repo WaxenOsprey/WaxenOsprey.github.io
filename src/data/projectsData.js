@@ -109,7 +109,7 @@ const projectsData = [
             },
           ],
           logos: phoenixTraderLogos,
-          video: "Hx6FJoGVYc4",
+          video: "mhjW-0VTwrU",
           gitHub: "https://github.com/WaxenOsprey/PhoenixTrader"
     },
     {
