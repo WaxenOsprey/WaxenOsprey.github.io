@@ -115,8 +115,7 @@ const ProjectsMobileMenu = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    margin-top: 2rem;
+    width: 100vw;
     margin-bottom: 2rem;
     padding-bottom: 2rem;
     border-bottom: 2px solid rgb(92, 188, 177);
@@ -136,9 +135,10 @@ const ProjectsContainer = styled.div`
     max-height: 100vh;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    margin-left: 0;
-    margin-right: 4rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     padding: 0;
+    align-items: center;
   }
 `;
 
@@ -220,6 +220,12 @@ const ProjectsWrapper = styled.div.attrs({ 'data-display-name': 'ProjectsWrapper
   display: flex;
   flex-direction: row;
   margin-top: 2rem;
+
+    @media (max-width: 768px) { 
+        flex-direction: column;
+        align-items: center;
+
+    }
 `;
 
 const ProjectsMenu = styled.div.attrs({ 'data-display-name': 'ProjectsMenu' })`
@@ -233,6 +239,8 @@ const ProjectsMenu = styled.div.attrs({ 'data-display-name': 'ProjectsMenu' })`
 
   @media (max-width: 768px) {
     display: none;
+    align-items: center;
+    
   }
 `;
 
@@ -242,6 +250,14 @@ const SelectedProjectContainer = styled.div.attrs({ 'data-display-name': 'Select
   width: 100%;
   align-items: center;
   margin-left: 4rem;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+        align-items: center;
+    }
 `;
 
 const ProjectHeading = styled.p.attrs({ 'data-display-name': 'ProjectHeading' })`
