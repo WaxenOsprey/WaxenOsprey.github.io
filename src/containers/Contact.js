@@ -15,7 +15,7 @@ const Contact = () => {
     <>
       <ContactContainer>
         <Title>Contact</Title>
-        <Message>I am based in <strong>Edinburgh, United Kingdom</strong>. Feel free to contact me using the links below!</Message>
+        <Message>I am based in <strong>Edinburgh, United Kingdom</strong>. Contact me using the links below!</Message>
         <MapWrapper>
           <WorldMap src={worldMap} alt="world map" />
         </MapWrapper>
