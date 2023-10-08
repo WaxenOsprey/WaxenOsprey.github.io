@@ -36,7 +36,7 @@ const HomeContainer = styled.div.attrs({ 'data-display-name': 'HomeContainer' })
 
 
   @media (max-width: 768px) {
-    padding: 0;
+    margin: 0;
     padding: 2rem; /* Add padding to center content vertically */
     justify-content: center;
     align-items: center;
@@ -61,7 +61,6 @@ const Name = styled.p.attrs({ 'data-display-name': 'Name' })`
 
   @media (max-width: 768px) {
     font-size: 4rem; 
-    white-space: nowrap;
     margin-top: 2rem;
     margin-bottom: 2rem;
 
@@ -76,7 +75,7 @@ const Headline = styled.p.attrs({ 'data-display-name': 'Headline' })`
   padding: 0;
 
   @media (max-width: 768px) {
-    font-size: 2rem; 
+    font-size: 1.5rem; 
   }
 `;
 
@@ -90,7 +89,7 @@ const Message = styled.p.attrs({ 'data-display-name': 'Message' })`
   width: 75%;
 
   @media (max-width: 768px) {
-    width: 75%; 
+    /* width: 75%;  */
     font-size: 0.9rem; 
   }
 `;

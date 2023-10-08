@@ -139,6 +139,7 @@ const ProjectsContainer = styled.div`
     margin-right: 2rem;
     padding: 0;
     align-items: center;
+    
   }
 `;
 
@@ -166,7 +167,8 @@ const ProjectIntro = styled.p.attrs({ 'data-display-name': 'ProjectIntro' })`
 
     @media (max-width: 768px) {
         width: 100%;
-        padding: 5%;
+        padding: 10%;
+        text-align: center;
     }
 `;
 
@@ -266,6 +268,13 @@ const ProjectHeading = styled.p.attrs({ 'data-display-name': 'ProjectHeading' })
 
 const ProjectContent = styled.p.attrs({ 'data-display-name': 'ProjectContent' })`
   color: rgb(203, 214, 244);
+
+  @media (max-width: 768px) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+
+  }
 `;
 
 const ProjectOverViewContainer = styled.div.attrs({ 'data-display-name': 'ProjectOverViewContainer' })`
@@ -343,6 +352,8 @@ const Logos = styled.div.attrs({ 'data-display-name': 'Logos' })`
     @media (max-width: 768px) {
         flex-direction: column;
         align-items: center;
+
+
     }
 `;
 
