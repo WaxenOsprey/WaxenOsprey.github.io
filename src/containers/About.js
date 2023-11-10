@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import profilePic from '../assets/pic5.jpg';
+import { Link } from 'react-router-dom';
 
 import { useEffect } from 'react';
 
@@ -31,14 +32,14 @@ const About = () => {
           <AboutSectionExtra>
           During the Covid-19 pandemic, I volunteered as the staff Health and Safety representative for Historic Environment Scotland, helping organise safety protocols to protect visitors and staff. The experience helped me realise I was ready to learn new things and take on new responsibilities, and during that time, I found myself increasingly interested in the world of tech once more. I spent some time after work completing the online CS50x course by Harvard University, which confirmed I had an interest and capacity for coding. I decided to make the jump and left my job to attend the Professional Software Development course at CodeClan. CodeClan provided me with a solid foundation in Agile best practices, TDD, OOP, and an array of languages and frameworks, including Python, JavaScript, Java, and more. I've put these skills to work in various projects which you can check out here. I completed the course in June and graduated with an additional PDA in Software Development.           </AboutSectionExtra>
           <AboutSectionExtraLast>
-          When I’m not coding or reading random history, I love to listen to and play music. I am a long-term guitar player, but these days I am trying to learn the mandolin (time permitting). I’m a keen gamer, mainly on the Xbox but a bit of PC gaming too. I also enjoy walking, especially if there are hills or heritage involved. Feel free to <ContactLink href='/contact'>get in touch! </ContactLink>         </AboutSectionExtraLast>
+          When I’m not coding or reading random history, I love to listen to and play music. I am a long-term guitar player, but these days I am trying to learn the mandolin (time permitting). I’m a keen gamer, mainly on the Xbox but a bit of PC gaming too. I also enjoy walking, especially if there are hills or heritage involved. Feel free to <ContactLink to="/contact">get in touch! </ContactLink>         </AboutSectionExtraLast>
         </AboutWrapper>
       </AboutContainer>
     </>
   );
 };
 
-const ContactLink = styled.a.attrs({ 'data-display-name': 'ContactLink' })`
+const ContactLink = styled(Link).attrs({ 'data-display-name': 'ContactLink' })`
   color: rgb(92, 188, 177);
   font-weight: bold;
   text-decoration: none;
