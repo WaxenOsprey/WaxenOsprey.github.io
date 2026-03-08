@@ -1,15 +1,27 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const NavBar = () => {
+  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+
   return (
     <>
       <NavContainer>
         <HomeLink to="/">PC</HomeLink>
         <NavList>
-          <NavListItem>
+          <NavListItem
+            onMouseEnter={() => setIsDropdownVisible(true)}
+            onMouseLeave={() => setIsDropdownVisible(false)}
+          >
             <SpanNumber>01. </SpanNumber>
             <NavListLink to="/about">About</NavListLink>
+            {isDropdownVisible && (
+              <DropdownMenu>
+                <DropdownItem to="/craneware">Craneware</DropdownItem>
+                <DropdownItem to="/codeclan">CodeClan</DropdownItem>
+              </DropdownMenu>
+            )}
           </NavListItem>
           <NavListItem>
             <SpanNumber>02. </SpanNumber>
@@ -24,10 +36,9 @@ const NavBar = () => {
       </NavContainer>
     </>
   );
-}
+};
 
-
-const NavContainer = styled.div.attrs({'data-display-name': 'NavContainer'})`
+const NavContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -45,8 +56,7 @@ const NavContainer = styled.div.attrs({'data-display-name': 'NavContainer'})`
   }
 `;
 
-
-const HomeLink = styled(Link).attrs({ 'data-display-name': 'HomeLink' })`
+const HomeLink = styled(Link)`
   color: rgb(11, 25, 48);
   font-size: 1.5rem;
   font-weight: bold;
@@ -73,8 +83,7 @@ const HomeLink = styled(Link).attrs({ 'data-display-name': 'HomeLink' })`
   }
 `;
 
-
-const NavList = styled.ul.attrs({ 'data-display-name': 'NavList' })`
+const NavList = styled.ul`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -89,7 +98,7 @@ const NavList = styled.ul.attrs({ 'data-display-name': 'NavList' })`
   }
 `;
 
-const NavListItem = styled.li.attrs({ 'data-display-name': 'NavListItem' })`
+const NavListItem = styled.li`
   color: rgb(203, 214, 244);
   font-size: 1.5rem;
   margin: 0;
@@ -99,6 +108,7 @@ const NavListItem = styled.li.attrs({ 'data-display-name': 'NavListItem' })`
   margin-left: 2rem;
   margin-right: 2rem;
   align-items: center;
+  position: relative;
 
   @media (max-width: 768px) {
     font-size: 1rem;
@@ -106,8 +116,7 @@ const NavListItem = styled.li.attrs({ 'data-display-name': 'NavListItem' })`
   }
 `;
 
-
-const NavListLink = styled(Link).attrs({ 'data-display-name': 'NavListLink' })`
+const NavListLink = styled(Link)`
   color: rgb(203, 214, 244);
   font-size: 1.5rem;
   margin: 0;
@@ -124,8 +133,31 @@ const NavListLink = styled(Link).attrs({ 'data-display-name': 'NavListLink' })`
   }
 `;
 
+const DropdownMenu = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(11, 25, 48, 0.9);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+`;
 
-const SpanNumber = styled.span.attrs({ 'data-display-name': 'SpanNumber' })`
+const DropdownItem = styled(Link)`
+  color: rgb(203, 214, 244);
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  text-decoration: none;
+
+  &:hover {
+    color: rgb(92, 188, 177);
+  }
+`;
+
+const SpanNumber = styled.span`
   color: rgb(92, 188, 177);
   margin-right: 0.5rem;
 
@@ -135,8 +167,7 @@ const SpanNumber = styled.span.attrs({ 'data-display-name': 'SpanNumber' })`
   }
 `;
 
-
-const CVLink = styled.a.attrs({ 'data-display-name': 'CVLink' })`
+const CVLink = styled.a`
   color: rgb(11, 25, 48);
   font-size: 1rem;
   font-weight: bold;
@@ -163,7 +194,5 @@ const CVLink = styled.a.attrs({ 'data-display-name': 'CVLink' })`
     padding: 0.3rem;
   }
 `;
-
-CVLink.displayName = 'CVLink';
 
 export default NavBar;
