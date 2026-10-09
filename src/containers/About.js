@@ -1,7 +1,7 @@
+
 import styled from 'styled-components';
 import profilePic from '../assets/pic5.jpg';
 import { Link } from 'react-router-dom';
-
 import { useEffect } from 'react';
 
 const About = () => {
@@ -10,153 +10,176 @@ const About = () => {
   }, []);
 
   return (
-    <>
-      <AboutContainer>
-        <Title>About</Title>
-        <Message></Message>
-        <AboutWrapper>
-          <UpperContainer>
-              <ProfilePic src={profilePic} alt="profile picture" />
-            <UpperWrapper>
-              <AboutSection>
-              I’m Paul Cumming, a QA Automation Engineer with over two years of experience in healthcare technology at The Craneware Group.
-              I specialise in building reliable systems, automating testing processes, and improving software quality across complex distributed services. My current role involves both automation and development work, and I’m actively progressing toward a full Software Engineer position.
-              </AboutSection>
-            </UpperWrapper>
-          </UpperContainer>
-          <AboutSectionExtra>
-          I’ve been passionate about technology from a young age, building my first desktop as a teenager and helping small businesses and my community with computer repairs. This early experience shaped my technical mindset, problem-solving skills, and ability to work under pressure - skills I now apply professionally in software development and automation.
-          </AboutSectionExtra>
-          <AboutSectionExtra>
-          After a career in heritage and history, including completing a History degree and working at Edinburgh Castle, I retrained as a software developer through the Professional Software Development course at CodeClan. There I gained practical experience with Agile workflows, TDD, OOP, and languages including Python, JavaScript, and Java, which I’ve applied in professional and personal projects.
-          </AboutSectionExtra>
-          <AboutSectionExtra>
-          </AboutSectionExtra>
-          <AboutSectionExtraLast>
-          Beyond work, I enjoy exploring history, playing and learning music (guitar), gaming, and walking - especially in areas rich in heritage. I’m always keen to discuss software, technology, or interesting projects, so feel free to <ContactLink to="/contact">get in touch.</ContactLink>
-          </AboutSectionExtraLast>
-        </AboutWrapper>
-      </AboutContainer>
-    </>
+    <AboutContainer>
+      <Title>About</Title>
+      <SectionDivider />
+
+      <AboutWrapper>
+        <UpperContainer>
+          <IntroWrapper>
+            <Paragraph>
+              I'm a software engineering
+              professional working in healthcare technology
+              at The Craneware Group. Since moving into the
+              industry in 2023, I've worked across technical
+              support, implementation scripting, and QA
+              automation, with my role more recently evolving
+              to focus primarily on software development.
+              I work mainly with C# and .NET, and have a
+              particular interest in software design
+              and architecture.
+            </Paragraph>
+          </IntroWrapper>
+
+          <ProfilePic
+            src={profilePic}
+            alt="Portrait of Paul Cumming"
+          />
+        </UpperContainer>
+
+        <Paragraph>
+          My interest in technology goes back much further,
+          from building my first computer as a teenager to
+          helping small businesses and people in my community
+          with computer repairs. Before moving into software,
+          however, I pursued a career in history and heritage.
+          I completed a degree in History and worked in the
+          heritage and tourism sector, including at
+          Edinburgh Castle.
+        </Paragraph>
+
+        <Paragraph>
+          I eventually decided to pursue my longstanding
+          interest in technology professionally, retraining
+          through CodeClan's Professional Software Development
+          course. Since then, I've enjoyed developing my
+          skills through both professional experience and
+          personal projects. Outside of work, I continue
+          to build applications and explore different
+          technologies, including my ongoing
+          project, Posterity.
+        </Paragraph>
+
+        <Paragraph>
+          Beyond software development, I enjoy reading and
+          exploring history, playing guitar, gaming, and
+          walking, particularly in places with interesting
+          heritage. I'm always happy to discuss technology,
+          software development, or projects,
+          so feel free to{' '}
+          <ContactLink to="/contact">
+            get in touch.
+          </ContactLink>
+        </Paragraph>
+      </AboutWrapper>
+    </AboutContainer>
   );
 };
 
-const ContactLink = styled(Link).attrs({ 'data-display-name': 'ContactLink' })`
+// Styled Components
+
+const AboutContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 3rem 2rem 6rem;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding: 2rem 1.5rem 4rem;
+  }
+`;
+
+const Title = styled.h1`
+  color: rgb(203, 214, 244);
+  font-size: 4rem;
+  font-weight: normal;
+  margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    text-align: center;
+  }
+`;
+
+const SectionDivider = styled.div`
+  width: 100%;
+  height: 2px;
+  background-color: rgb(92, 188, 177);
+  margin: 1.5rem 0 3rem;
+
+  @media (max-width: 768px) {
+    margin: 1rem 0 2rem;
+  }
+`;
+
+const AboutWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  gap: 1.5rem;
+`;
+
+const UpperContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-bottom: 1rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    margin-bottom: 0;
+  }
+`;
+
+const IntroWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+`;
+
+const ProfilePic = styled.img`
+  width: 180px;
+  height: 180px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+
+  @media (max-width: 768px) {
+    width: 140px;
+    height: 140px;
+  }
+`;
+
+const Paragraph = styled.p`
+  color: rgb(203, 214, 244);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+`;
+
+const ContactLink = styled(Link)`
   color: rgb(92, 188, 177);
   font-weight: bold;
   text-decoration: none;
-`
 
-const AboutContainer = styled.div.attrs({ 'data-display-name': 'AboutContainer' })`
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 8rem;
-  margin-left: 4rem;
-  margin-right: 4rem;
-  padding: 4rem;
-  width: 100%;
-
-  @media (max-width: 768px) {
-    padding: 1rem;
-    margin: 0;
-    height: 100%;
-    width: 100%;
+  &:hover {
+    color: rgb(203, 214, 244);
+    text-decoration: underline;
   }
-`;
-
-const AboutWrapper = styled.div.attrs({ 'data-display-name': 'AboutWrapper' })`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-`;
-
-const UpperWrapper = styled.div.attrs({ 'data-display-name': 'UpperWrapper' })`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const UpperContainer = styled.div.attrs({ 'data-display-name': 'UpperContainer' })`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 2rem;
-
-  @media (min-width: 769px) {
-    flex-direction: row-reverse;
-    justify-content: space-between;
-  }
-`;
-
-const Title = styled.p.attrs({ 'data-display-name': 'Title' })`
-  color: rgb(203, 214, 244);
-  font-size: 4rem;
-  margin: 0;
-  padding: 0;
-
-    @media (max-width: 768px) {
-        font-size: 2rem;
-    }
-`;
-
-const Message = styled.p.attrs({ 'data-display-name': 'Message' })`
-  color: rgb(135, 145, 174);
-  font-size: 1rem;
-  padding: 0;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  line-height: 1.5;
-  height: 2rem;
-  border-top: 2px solid rgb(92, 188, 177);
-  border-right: 2px solid rgb(92, 188, 177);
-`;
-
-const ProfilePic = styled.img.attrs({ 'data-display-name': 'ProfilePic' })`
-  height: 180px;
-  width: 180px;
-  border-radius: 50%;
-  margin: 4rem;
-
-    @media (max-width: 768px) {
-        height: 50px;
-        width: 50px;
-        margin: 2rem;
-    }
-`;
-
-const AboutSection = styled.p.attrs({ 'data-display-name': 'AboutSection' })`
-  color: rgb(203, 214, 244);
-  font-size: 1rem;
-  margin: 0;
-  padding: 0;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  line-height: 1.5;
-
-    @media (max-width: 768px) {
-        
-    }
-`;
-
-const AboutSectionExtra = styled.p.attrs({ 'data-display-name': 'AboutSectionExtra' })`
-  color: rgb(203, 214, 244);
-  font-size: 1rem;
-  margin: 0;
-  padding: 0;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  line-height: 1.5;
-  
-`;
-
-const AboutSectionExtraLast = styled.p.attrs({ 'data-display-name': 'AboutSectionExtraLast' })`
-  color: rgb(203, 214, 244);
-  font-size: 1rem;
-  padding: 0;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  line-height: 1.5;
 `;
 
 export default About;

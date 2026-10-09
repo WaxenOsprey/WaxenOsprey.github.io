@@ -1,154 +1,141 @@
+
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import CareerTimer from '../components/CareerTimer';
 
 const Home = () => {
   return (
-    <>
-      <HomeContainer>
-        <Hi>Hi, my name is</Hi>
-        <Name>Paul Cumming</Name>
-        <Headline>I build reliable software systems
-        </Headline>
-        <SubHeadline>Automation • Testing • Backend Development</SubHeadline>
-        <Message>
-          I’m a software engineer with over two years of professional experience working in healthcare technology at
-          <span>
-            <Craneware href='https://www.thecranewaregroup.com/'> The Craneware Group. </Craneware>
-          </span>
-          My work focuses on building reliable systems, improving software quality through automation, and diagnosing complex issues across distributed systems. Recently my role has expanded to include development work, and I’m currently progressing towards a Software Engineer position while continuing to deepen my experience in backend development and system design.
-        </Message>
-        <Link to="/projects" style={{ textDecoration: 'none' }}>
-          <ActionButton>
-            Check out my projects
-          </ActionButton>
-        </Link>
-      </HomeContainer>
-    </>
+    <HomeContainer>
+      <Name>Paul Cumming</Name>
+
+      <SubHeadline>
+        Software Development • C# / .NET • Quality Engineering
+      </SubHeadline>
+
+      <Message>
+        I'm a software engineering professional working in
+        healthcare technology at{' '}
+        <CranewareLink to="/craneware">
+          The Craneware Group
+        </CranewareLink>
+        . My career has progressed from technical support
+        and QA automation into a role focused primarily
+        on software development.
+      </Message>
+
+      <Message>
+        I work mainly with C# and .NET, contributing to
+        the development and modernisation of healthcare
+        applications while drawing on my background in
+        testing and automation. I'm particularly interested
+        in software design, architecture, and building
+        reliable, maintainable systems.
+      </Message>
+
+      <CareerTimer />
+
+      <ActionLink to="/projects">
+        Explore my projects
+      </ActionLink>
+    </HomeContainer>
   );
 };
 
-const HomeContainer = styled.div.attrs({ 'data-display-name': 'HomeContainer' })`
+const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
-  margin-left: 4rem;
-  margin-right: 4rem;
-  margin-bottom: 0;
-  /* width: 100vw;
-  height: 100vh; */
-
+  align-items: flex-start;
+  flex: 1;
+  min-width: 0;
+  margin: 2rem 4rem 0;
+  padding-bottom: 4rem;
 
   @media (max-width: 768px) {
     margin: 0;
-    padding: 2rem; /* Add padding to center content vertically */
-    justify-content: center;
+    padding: 2rem 1.5rem;
     align-items: center;
-    text-align: center; /* Center text within the container */
-    /* max-width: 100vh; */
-
+    justify-content: center;
+    text-align: center;
   }
 `;
 
-const Hi = styled.p.attrs({ 'data-display-name': 'Hi' })`
-  color: rgb(92, 188, 177);
-  font-size: 1rem;
-  margin: 0;
-  padding: 0;
-`;
-
-const Name = styled.p.attrs({ 'data-display-name': 'Name' })`
+const Name = styled.h1`
   color: rgb(203, 214, 244);
-  font-size: 6rem;
+  font-size: clamp(2.5rem, 5vw, 6rem);
+  font-weight: normal;
+  line-height: 1.15;
   margin: 0;
-  padding: 0;
 
   @media (max-width: 768px) {
-    font-size: 4rem; 
+    font-size: clamp(2rem, 8vw, 3.5rem);
     margin-top: 2rem;
-    margin-bottom: 2rem;
-
-
-  }
-`;
-
-const Headline = styled.p.attrs({ 'data-display-name': 'Headline' })`
-  color: rgb(135, 145, 174);
-  font-size: 4rem;
-  margin: 0;
-  padding: 0;
-
-  @media (max-width: 768px) {
-    font-size: 1.5rem; 
-  }
-`;
-
-const SubHeadline = styled.p.attrs({ 'data-display-name': 'SubHeadline' })`
-  color: rgb(92, 188, 177);
-  font-size: 2rem;
-  margin: 0;
-  padding: 0;
-  margin-top: 1rem;
-
-  @media (max-width: 768px) {
-    font-size: 1.2rem; 
-    margin-top: 1rem;
     margin-bottom: 1rem;
-  } 
+  }
 `;
 
-const Message = styled.p.attrs({ 'data-display-name': 'Message' })`
+const SubHeadline = styled.h2`
+  color: rgb(92, 188, 177);
+  font-size: clamp(1.2rem, 2.2vw, 2rem);
+  font-weight: normal;
+  line-height: 1.5;
+  margin: 1rem 0 2rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+    margin: 1rem 0 2rem;
+  }
+`;
+
+const Message = styled.p`
   color: rgb(135, 145, 174);
   font-size: 1rem;
-  padding: 0;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  line-height: 1.5;
-  width: 75%;
+  line-height: 1.8;
+  width: 100%;
+  max-width: 950px;
+  margin: 0 0 1.25rem;
 
   @media (max-width: 768px) {
-    /* width: 75%;  */
-    font-size: 0.9rem; 
+    font-size: 0.95rem;
+    line-height: 1.7;
   }
 `;
 
-const Craneware = styled.a.attrs({ 'data-display-name': 'Craneware' })`
+const CranewareLink = styled(Link)`
   color: rgb(92, 188, 177);
   text-decoration: none;
   font-weight: bold;
 
   &:hover {
     color: rgb(203, 214, 244);
+    text-decoration: underline;
   }
 `;
 
-const ActionButton = styled.button.attrs({ 'data-display-name': 'ActionButton' })`
+const ActionLink = styled(Link)`
   color: rgb(92, 188, 177);
   font-size: 1rem;
   text-decoration: none;
-  margin: 0;
-  padding: 0;
+  font-weight: 500;
   margin-top: 2rem;
-  line-height: 1.5;
   border: 2px solid rgb(92, 188, 177);
   display: flex;
   justify-content: center;
-  background-color: transparent;
   align-items: center;
   height: 3rem;
   width: 20rem;
   border-radius: 5px;
-  cursor: pointer;
-
-  @media (max-width: 768px) {
-    width: 15rem; 
-  }
+  background-color: transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
 
   &:hover {
     color: rgb(203, 214, 244);
-    border: 2px solid rgb(203, 214, 244);
-    text-decoration: none;
+    border-color: rgb(203, 214, 244);
+  }
+
+  @media (max-width: 768px) {
+    width: 15rem;
+    max-width: 100%;
   }
 `;
-
 
 export default Home;
