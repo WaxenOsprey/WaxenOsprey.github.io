@@ -52,19 +52,17 @@ const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /* overflow-x: hidden; */
+  width: 100%;
+  box-sizing: border-box;
 
   @media (max-width: 768px) {
     margin: 0;
-    /* overflow-x: visible; */
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
-    /* flex-grow: 1; */
+    min-height: 100vh;
   }
-  
 `;
 
 const AppContainer = styled.div`
