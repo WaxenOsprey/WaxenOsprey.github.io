@@ -6,17 +6,20 @@ const Home = () => {
     <>
       <HomeContainer>
         <Hi>Hi, my name is</Hi>
-        <Name>Paul Cumming.</Name>
-        <Headline>I am a Junior Software Developer.</Headline>
+        <Name>Paul Cumming</Name>
+        <Headline>I build reliable software systems
+        </Headline>
+        <SubHeadline>Automation • Testing • Backend Development</SubHeadline>
         <Message>
-          I'm a trained Software Engineer who has recently made a career change from heritage and tourism to technology. Currently, I'm focused on gaining experience in the tech sector working with the Software Support Team at
+          I’m a software engineer with over two years of professional experience working in healthcare technology at
           <span>
-            <Craneware href='https://www.thecranewaregroup.com/'> The Craneware Group.</Craneware>
+            <Craneware href='https://www.thecranewaregroup.com/'> The Craneware Group. </Craneware>
           </span>
+          My work focuses on building reliable systems, improving software quality through automation, and diagnosing complex issues across distributed systems. Recently my role has expanded to include development work, and I’m currently progressing towards a Software Engineer position while continuing to deepen my experience in backend development and system design.
         </Message>
         <Link to="/projects" style={{ textDecoration: 'none' }}>
           <ActionButton>
-            Check out my projects!
+            Check out my projects
           </ActionButton>
         </Link>
       </HomeContainer>
@@ -77,6 +80,20 @@ const Headline = styled.p.attrs({ 'data-display-name': 'Headline' })`
   @media (max-width: 768px) {
     font-size: 1.5rem; 
   }
+`;
+
+const SubHeadline = styled.p.attrs({ 'data-display-name': 'SubHeadline' })`
+  color: rgb(92, 188, 177);
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  margin-top: 1rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem; 
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  } 
 `;
 
 const Message = styled.p.attrs({ 'data-display-name': 'Message' })`

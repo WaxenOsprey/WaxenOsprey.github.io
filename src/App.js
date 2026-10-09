@@ -12,6 +12,8 @@ import SideBar from './components/SideBar';
 import projectsData from './data/projectsData';
 import './App.css';
 import MobileNavBar from './components/MobileNavBar';
+import CodeClan from './containers/CodeClan';
+import Craneware from './containers/Craneware';
 
 
 function App() {
@@ -33,6 +35,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} index /> 
               <Route path="/about" element={<About/>}/> 
+              <Route path="/craneware" element={<Craneware />} />
+              <Route path="/codeclan" element={<CodeClan />} />
               <Route path="/projects" element={<Projects projects={projects}/>} />
               <Route path="/contact" element={<Contact/>}/>
             </Routes>
