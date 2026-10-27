@@ -4,8 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0b1930" />
-    <meta name="description" content="Paul Cumming — software engineering, C#/.NET, and full-stack development." />
+    <meta name="description" content="Paul Cumming — software engineering professional specialising in C#/.NET development, full-stack applications, and software quality." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Paul Cumming | Software Engineering" />
+    <meta property="og:description" content="Software engineering, C#/.NET, full-stack projects and professional experience." />
+    <meta property="og:url" content="https://www.paulsamuelcumming.dev/" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Paul Cumming | Software Engineering</title>
+    <script>
+      (function () {
+        const params = new URLSearchParams(window.location.search);
+        const redirect = params.get('route');
+        if (redirect && redirect.startsWith('/') && !redirect.startsWith('//')) {
+          history.replaceState(null, '', redirect + window.location.hash);
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
