@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex" />
+    <script>
+      (function () {
+        const url = new URL(window.location.href);
+        const route = url.pathname + url.search;
+        window.location.replace(url.origin + '/?route=' + encodeURIComponent(route) + url.hash);
+      })();
+    </script>
+  </head>
+  <body><p>Redirecting to portfolio…</p></body>
+</html>
