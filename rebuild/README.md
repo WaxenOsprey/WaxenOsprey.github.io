@@ -15,10 +15,11 @@ npm run dev
 
 ```sh
 npm run typecheck
+npm run test
 npm run build
 ```
 
-The environment used to author this initial foundation could not install npm dependencies, so a successful build has **not** yet been verified. Please run the commands above locally before treating PBI 001 as complete.
+The initial app build was confirmed locally on 27 October 2026. Run the new tests after installing the updated dev dependencies; they have not yet been verified in the contributor's environment.
 
 ## Homepage scope
 
