@@ -3,3 +3,4 @@ dist/
 *.tsbuildinfo
 coverage/
 .env.local
+.vitest/
