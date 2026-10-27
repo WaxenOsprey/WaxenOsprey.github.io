@@ -1,26 +1,30 @@
 # Portfolio rebuild
 
-Work-in-progress React + TypeScript + Vite application. The original portfolio lives at the repository root and stays deployed while the rebuild is developed in this directory.
+React + TypeScript + Vite work-in-progress, developed independently from the existing GitHub Pages application in the repository root.
 
-## Start locally
+## Run locally
 
 ```sh
+git switch feature/001-portfolio-rebuild-foundation
 cd rebuild
 npm install
 npm run dev
 ```
 
-## Checks
+## Quality checks
 
 ```sh
 npm run typecheck
 npm run build
 ```
 
-## Design
+The environment used to author this initial foundation could not install npm dependencies, so a successful build has **not** yet been verified. Please run the commands above locally before treating PBI 001 as complete.
 
-The homepage follows four sections: large typographic introduction, horizontally scrolling featured projects, experience timeline and categorised technology logos. Current project images and skills are placeholders; real images/logos and accessible carousel controls are follow-on work.
+## Homepage scope
 
-## Deployment
+- Typography-led introduction
+- Featured projects with horizontally scrolling, keyboard-accessible carousel
+- Career progression timeline
+- Categorised skills (actual SVG technology logos planned next)
 
-Do not deploy `rebuild/` to the live GitHub Pages site yet. Migration to the repository root, routing, tests and the production workflow will be handled after the new portfolio is ready.
+Project screenshots, project detail pages, logo assets, production routing, automated tests and deployment workflow are follow-on tasks. Do not deploy the `rebuild/` app to the live site until the replacement is ready.
