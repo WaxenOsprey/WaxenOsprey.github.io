@@ -48,3 +48,15 @@ h2 { font-size:clamp(1.8rem, 3vw, 2.6rem); line-height:1.2; }
   .skills-grid { grid-template-columns:1fr; gap:1.5rem; }
 }
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+
+
+/* Gallery controls and accessible horizontal navigation */
+.project-carousel { position: relative; }
+.gallery-controls { display:flex; justify-content:flex-end; gap:.5rem; margin:-3rem 0 1.5rem; }
+.gallery-controls button { border:1px solid #40546d; background:transparent; color:#d8e2ef; border-radius:50%; height:2.5rem; width:2.5rem; font:inherit; cursor:pointer; }
+.gallery-controls button:hover:not(:disabled) { background:#182d44; border-color:#5cbcb1; }
+.gallery-controls button:disabled { opacity:.35; cursor:not-allowed; }
+.gallery-controls button:focus-visible, .project-gallery:focus-visible { outline:2px solid #5cbcb1; outline-offset:3px; }
+.project-gallery { overscroll-behavior-x:contain; scrollbar-width:thin; scrollbar-color:#496078 transparent; }
+.project-preview span { padding:1rem; text-align:center; }
+@media(max-width:650px) { .gallery-controls { margin:0 0 1rem; } }
