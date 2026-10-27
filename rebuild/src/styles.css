@@ -257,3 +257,7 @@ p { line-height: 1.76; }
   html { scroll-behavior:auto; }
   *, *::before, *::after { transition-duration:.01ms !important; animation-duration:.01ms !important; }
 }
+
+.tech-logo__image { width:34px; height:34px; object-fit:contain; }
+.tech-logo--compact .tech-logo__image { width:26px; height:26px; }
+.tech-logo__image--invert { filter:invert(1); }
