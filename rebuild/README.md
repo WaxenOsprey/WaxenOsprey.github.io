@@ -1,31 +1,43 @@
-# Portfolio rebuild
+# Paul Cumming — Portfolio Rebuild
 
-React + TypeScript + Vite work-in-progress, developed independently from the existing GitHub Pages application in the repository root.
+A React/TypeScript portfolio built with Vite. The design retains the dark navy/teal identity of the earlier website while refreshing its code and presentation.
 
-## Run locally
+## Local development
 
 ```sh
-git switch feature/001-portfolio-rebuild-foundation
 cd rebuild
 npm install
 npm run dev
 ```
 
-## Quality checks
+Production build: `npm run build` (includes TypeScript checking). Preview: `npm run preview`. There is intentionally no test suite for this personal portfolio rebuild.
 
-```sh
-npm run typecheck
-npm run test
-npm run build
-```
+## Features
 
-The initial app build was confirmed locally on 27 October 2026. Run the new tests after installing the updated dev dependencies; they have not yet been verified in the contributor's environment.
+- Typography-led homepage: Introduction, Selected Work, Experience, Skills & Technologies
+- Native CSS scroll-snap carousel with accessible buttons and keyboard navigation
+- Vertical career timeline, with a distinct marker for the current role
+- Technology logos rendered through `react-icons/si` (official brand glyphs from Simple Icons); fallback labels for technologies without a suitable icon
+- Project listing and individual project overview pages
+- Dedicated Experience, About and Contact pages
+- Responsive layout and reduced-motion support
+- Static GitHub Pages deployment-ready Vite build
 
-## Homepage scope
+## Structure
 
-- Typography-led introduction
-- Featured projects with horizontally scrolling, keyboard-accessible carousel
-- Career progression timeline
-- Categorised skills (actual SVG technology logos planned next)
+- `src/data/portfolio.ts` — editable project, career and technology data
+- `src/components` — reusable gallery, timeline, visual illustrations and site chrome
+- `src/pages` — route-level content
+- `src/styles.css` — design tokens, site layout and responsive styles
 
-Project screenshots, project detail pages, logo assets, production routing, automated tests and deployment workflow are follow-on tasks. Do not deploy the `rebuild/` app to the live site until the replacement is ready.
+## Important content notes
+
+Project visuals are **illustrative CSS designs**, not real application screenshots. Replace them with actual screenshots or short videos as the applications mature.
+
+The new CV PDF has not been supplied with this repository, so the navigation **requests the CV by email** instead of linking to the previous, potentially outdated PDF. Once the new PDF is available, add it as `public/paulsamuelcumming.pdf` and point the navigation link at that asset.
+
+The current portfolio remains active on `main`. Build and inspect this branch first. The custom domain is recorded in `public/CNAME`. The GitHub Pages deployment workflow is configured for the completed site and should be enabled at cutover, after choosing GitHub Actions as the Pages source.
+
+## Routing on GitHub Pages
+
+This is a static SPA with `BrowserRouter`; `public/404.html` redirects deep links back through `index.html` to restore the requested route. If migrating to a platform that supports rewrites, configure a normal fallback to `index.html` instead.
