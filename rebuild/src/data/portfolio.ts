@@ -133,7 +133,7 @@ export const projects: readonly Project[] = [
   },
   {
     slug: 'solar-system-db', name: 'SolarSystem.DB', category: 'Full-stack application',
-    status: 'CodeClan project', visual: 'solar', featured: false,
+    status: 'CodeClan project', visual: 'solar', featured: true,
     summary: 'A Flask and PostgreSQL application for exploring and managing solar system entities.',
     overview: 'A solo project from CodeClan exploring relational data, backend routes, CRUD functionality and the construction of a full-stack web application.',
     technologies: ['python', 'postgresql'],
@@ -142,7 +142,7 @@ export const projects: readonly Project[] = [
   },
   {
     slug: 'phoenix-trader', name: 'PhoenixTrader', category: 'Group application',
-    status: 'CodeClan project', visual: 'phoenix', featured: false,
+    status: 'CodeClan project', visual: 'phoenix', featured: true,
     summary: 'A group-built portfolio and watchlist application for tracking investments.',
     overview: 'A collaborative CodeClan project bringing together a React client, Node/Express API and MongoDB data store, with stock information sourced from the Finnhub API.',
     technologies: ['react', 'javascript', 'node', 'mongodb'],
@@ -151,7 +151,7 @@ export const projects: readonly Project[] = [
   },
   {
     slug: 'gwentish', name: 'Gwentish!', category: 'Group capstone',
-    status: 'CodeClan project', visual: 'gwentish', featured: false,
+    status: 'CodeClan project', visual: 'gwentish', featured: true,
     summary: 'A multiplayer-inspired digital card game built with a Spring Boot backend and React.',
     overview: 'A CodeClan capstone project recreating the mechanics of a strategic card game, with player accounts, deck selection and scoring.',
     technologies: ['java', 'spring', 'react', 'javascript'],

@@ -30,7 +30,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
     <>
       <a className="skip-link" href="#main">Skip to content</a>
       <header className="site-header page-container">
-        <Link to="/" className="brand" aria-label="Portfolio home">PORTFOLIO<span>.</span></Link>
+        <Link to="/" className="brand" aria-label="Portfolio home">HOME<span>.</span></Link>
         <button className="mobile-menu-toggle icon-button" type="button" aria-label={menuOpen ? 'Close navigation' : 'Open navigation'} aria-expanded={menuOpen} aria-controls="primary-navigation" onClick={() => setMenuOpen(open => !open)}>
           {menuOpen ? <FiX /> : <FiMenu />}
         </button>

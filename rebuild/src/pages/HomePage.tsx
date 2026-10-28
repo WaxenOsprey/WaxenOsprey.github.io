@@ -10,9 +10,9 @@ export function HomePage() {
     <>
       <section id="top" className="hero" aria-labelledby="home-title">
         <div className="eyebrow">01 / INTRODUCTION</div>
-        <h1 id="home-title">Paul Cumming<span className="accent">.</span></h1>
-        <p className="hero__tagline">Software Development<br /><span>&amp; Engineering.</span></p>
-        <div className="hero__copy"><p>I'm a software engineering professional working primarily with C# and .NET, with experience spanning software development, QA automation and healthcare technology.</p><p>I enjoy solving problems, building maintainable applications and exploring software design through work and personal projects.</p></div>
+        <h1 id="home-title">Paul Cumming<span className="accent"> </span></h1>
+            <p className="hero__tagline">Software Development • C# / .NET • Quality Engineering</p>        
+            <div className="hero__copy"><p>I'm a software engineering professional working primarily with C# and .NET, with experience spanning software development, QA automation and healthcare technology.</p><p>I enjoy solving problems, building maintainable applications and exploring software design through work and personal projects.</p></div>
         <Link className="hero__explore text-link" to="/#work">Explore my work <FiArrowDownRight aria-hidden="true" /></Link>
         <span className="hero__decoration" aria-hidden="true">&lt;/&gt;</span>
       </section>
