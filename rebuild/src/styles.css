@@ -84,10 +84,11 @@ p { line-height: 1.76; }
 .icon-button:hover:not(:disabled) { background: var(--surface-raised); border-color: var(--accent); }
 .icon-button:disabled { opacity: .35; cursor: not-allowed; }
 .project-carousel { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(290px, 73%); gap: clamp(1rem, 2.3vw, 1.75rem); overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-color: #536783 transparent; scrollbar-width: thin; padding: 0 0 1.5rem; }
-.project-card { min-width: 0; scroll-snap-align: start; }
+.project-card { min-width: 0; scroll-snap-align: start; display: grid; grid-template-rows: auto auto 1fr auto}
 .project-card__visual-link { display: block; border-radius: 9px; overflow: hidden; }
 .project-card__visual-link:hover .project-visual { filter: brightness(1.12); }
 .project-card__heading { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding-top: 1.35rem; }
+.project-card__heading .micro-label {display: block; min-height: 3em; line-height: 1.5; }
 .project-card__heading h3 { font-size: clamp(1.4rem, 2.3vw, 1.85rem); letter-spacing: -.03em; margin: .4rem 0 0; }
 .project-card__arrow { display: grid; place-items: center; color: var(--accent); font-size: 1.5rem; }
 .project-card__arrow svg { transition: transform .2s; }

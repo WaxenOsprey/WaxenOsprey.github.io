@@ -17,7 +17,7 @@ export function HomePage() {
         <span className="hero__decoration" aria-hidden="true">&lt;/&gt;</span>
       </section>
       <section id="work" className="page-section" aria-labelledby="work-title">
-        <div className="section-intro"><span className="eyebrow">02 / SELECTED WORK</span><h2 id="work-title">Things I've built<span className="accent">.</span></h2><p>Personal projects exploring application development, software architecture and integration.</p></div>
+        <div className="section-intro"><span className="eyebrow">02 / SELECTED WORK</span><h2 id="work-title">Things I've built<span className="accent">.</span></h2><p>Some of my personal projects exploring application development, software architecture and integration.</p></div>
         <ProjectCarousel projects={featuredProjects} />
         <div className="section-outro"><Link to="/projects" className="text-link">Explore all projects <FiArrowUpRight aria-hidden="true" /></Link></div>
       </section>
