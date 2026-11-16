@@ -2,54 +2,61 @@ import type { TechnologyId } from '../data/portfolio';
 import { technologyNames } from '../data/portfolio';
 
 /**
- * Local SVG assets from Devicon. Avoid importing brand icons by named export:
- * not every Simple Icons release exposes every brand (notably C#).
+ * Locally stored SVGs. See public/logos/SOURCES.md for original assets and credits.
+ * Each technology must map to a real SVG: no text-only placeholder tiles.
  */
-const logoAssets: Partial<Record<TechnologyId, string>> = {
+const logoAssets: Record<TechnologyId, string> = {
   csharp: 'csharp',
   dotnet: 'dotnet',
+  aspnetcore: 'dotnetcore',
+  webforms: 'dotnet',
+  visualbasic: 'visualbasic',
   angular: 'angular',
   react: 'react',
   typescript: 'typescript',
+  javascript: 'javascript',
+  html: 'html',
+  css: 'css',
   postgresql: 'postgresql',
   sql: 'sql',
+  cosmos: 'cosmos',
+  mongodb: 'mongodb',
+  entityframework: 'entityframework',
   azure: 'azure',
   git: 'git',
   github: 'github',
-  javascript: 'javascript',
+  azuredevops: 'azuredevops',
+  nunit: 'nunit',
+  nsubstitute: 'nsubstitute',
+  postman: 'postman',
+  api: 'api',
   python: 'python',
-  spring: 'spring',
-  mongodb: 'mongodb',
+  flask: 'flask',
   node: 'node',
+  express: 'express',
+  spring: 'spring',
+  garmin: 'garmin',
   java: 'java',
 };
 
-const fallbackNames: Partial<Record<TechnologyId, string>> = {
-  api: 'API',
-  cosmos: 'DB',
-  nunit: 'N',
-  garmin: 'G',
-  aspnetcore: '.NET',
-  webforms: 'WF',
-  visualbasic: 'VB',
-  html: 'HTML',
-  css: 'CSS',
-  entityframework: 'EF',
-  nsubstitute: 'NS',
-  postman: 'PM',
-  azuredevops: 'ADO',
-  express: 'EX',
-  flask: 'FL',
-};
+// Monochrome marks are drawn dark by their sources, so render them light on
+// the dark portfolio background. Keep other logos in their original colours.
+const lightIconIds = new Set<TechnologyId>(['github', 'express', 'flask', 'garmin']);
 
 export function TechnologyLogo({ id, compact = false }: { id: TechnologyId; compact?: boolean }) {
-  const asset = logoAssets[id];
+  const classNames = ['tech-logo__image'];
+  if (lightIconIds.has(id)) classNames.push('tech-logo__image--invert');
+  if (id === 'garmin') classNames.push('tech-logo__image--wordmark');
+
   return (
     <span className={compact ? 'tech-logo tech-logo--compact' : 'tech-logo'} title={technologyNames[id]}>
       <span className="tech-logo__art" aria-hidden="true">
-        {asset
-          ? <img className={id === 'github' ? 'tech-logo__image tech-logo__image--invert' : 'tech-logo__image'} src={`/logos/${asset}.svg`} alt="" loading="lazy" />
-          : <span className="tech-logo__fallback">{fallbackNames[id] ?? technologyNames[id].slice(0, 2)}</span>}
+        <img
+          className={classNames.join(' ')}
+          src={`/logos/${logoAssets[id]}.svg`}
+          alt=""
+          loading="lazy"
+        />
       </span>
       <span className="tech-logo__name">{technologyNames[id]}</span>
     </span>
