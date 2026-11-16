@@ -1,7 +1,35 @@
 export type TechnologyId =
-  | 'csharp' | 'dotnet' | 'angular' | 'react' | 'typescript' | 'postgresql'
-  | 'sql' | 'cosmos' | 'azure' | 'git' | 'github' | 'nunit' | 'api'
-  | 'javascript' | 'python' | 'spring' | 'mongodb' | 'node' | 'garmin' | 'java';
+  | 'csharp'
+  | 'dotnet'
+  | 'aspnetcore'
+  | 'webforms'
+  | 'visualbasic'
+  | 'angular'
+  | 'react'
+  | 'typescript'
+  | 'javascript'
+  | 'html'
+  | 'css'
+  | 'postgresql'
+  | 'sql'
+  | 'cosmos'
+  | 'mongodb'
+  | 'entityframework'
+  | 'azure'
+  | 'git'
+  | 'github'
+  | 'azuredevops'
+  | 'nunit'
+  | 'nsubstitute'
+  | 'postman'
+  | 'api'
+  | 'python'
+  | 'flask'
+  | 'node'
+  | 'express'
+  | 'spring'
+  | 'garmin'
+  | 'java';
 
 export interface Technology {
   id: TechnologyId;
@@ -9,12 +37,37 @@ export interface Technology {
 }
 
 export const technologyNames: Record<TechnologyId, string> = {
-  csharp: 'C#', dotnet: '.NET', angular: 'Angular', react: 'React',
-  typescript: 'TypeScript', postgresql: 'PostgreSQL', sql: 'SQL Server',
-  cosmos: 'Cosmos DB', azure: 'Azure', git: 'Git', github: 'GitHub',
-  nunit: 'NUnit', api: 'REST APIs', javascript: 'JavaScript',
-  python: 'Python', spring: 'Spring Boot', mongodb: 'MongoDB',
-  node: 'Node.js', garmin: 'Garmin', java: 'Java',
+  csharp: 'C#',
+  dotnet: '.NET',
+  aspnetcore: 'ASP.NET Core',
+  webforms: 'ASP.NET Web Forms',
+  visualbasic: 'Visual Basic / VBA',
+  angular: 'Angular',
+  react: 'React',
+  typescript: 'TypeScript',
+  javascript: 'JavaScript',
+  html: 'HTML',
+  css: 'CSS',
+  postgresql: 'PostgreSQL',
+  sql: 'SQL Server',
+  cosmos: 'Cosmos DB',
+  mongodb: 'MongoDB',
+  entityframework: 'EF Core',
+  azure: 'Azure',
+  git: 'Git',
+  github: 'GitHub',
+  azuredevops: 'Azure DevOps',
+  nunit: 'NUnit',
+  nsubstitute: 'NSubstitute',
+  postman: 'Postman',
+  api: 'REST APIs',
+  python: 'Python',
+  flask: 'Flask',
+  node: 'Node.js',
+  express: 'Express',
+  spring: 'Spring Boot',
+  garmin: 'Garmin',
+  java: 'Java',
 };
 
 export interface SkillGroup {
@@ -23,10 +76,54 @@ export interface SkillGroup {
 }
 
 export const skillGroups: readonly SkillGroup[] = [
-  { title: 'Backend', technologies: ['csharp', 'dotnet', 'api'] },
-  { title: 'Frontend', technologies: ['angular', 'react', 'typescript'] },
-  { title: 'Data', technologies: ['postgresql', 'sql', 'cosmos'] },
-  { title: 'Testing & delivery', technologies: ['nunit', 'git', 'azure'] },
+  {
+    title: 'Backend',
+    technologies: [
+      'csharp',
+      'dotnet',
+      'aspnetcore',
+      'webforms',
+      'visualbasic',
+      'python',
+      'node',
+      'express',
+      'flask',
+      'api',
+    ],
+  },
+  {
+    title: 'Frontend',
+    technologies: [
+      'angular',
+      'react',
+      'typescript',
+      'javascript',
+      'html',
+      'css',
+    ],
+  },
+  {
+    title: 'Data & cloud',
+    technologies: [
+      'postgresql',
+      'sql',
+      'cosmos',
+      'mongodb',
+      'entityframework',
+      'azure',
+    ],
+  },
+  {
+    title: 'Testing & delivery',
+    technologies: [
+      'nunit',
+      'nsubstitute',
+      'postman',
+      'git',
+      'github',
+      'azuredevops',
+    ],
+  },
 ];
 
 export interface Role {

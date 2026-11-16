@@ -29,6 +29,17 @@ const fallbackNames: Partial<Record<TechnologyId, string>> = {
   cosmos: 'DB',
   nunit: 'N',
   garmin: 'G',
+  aspnetcore: '.NET',
+  webforms: 'WF',
+  visualbasic: 'VB',
+  html: 'HTML',
+  css: 'CSS',
+  entityframework: 'EF',
+  nsubstitute: 'NS',
+  postman: 'PM',
+  azuredevops: 'ADO',
+  express: 'EX',
+  flask: 'FL',
 };
 
 export function TechnologyLogo({ id, compact = false }: { id: TechnologyId; compact?: boolean }) {
