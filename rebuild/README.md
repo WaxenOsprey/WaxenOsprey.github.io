@@ -26,13 +26,13 @@ Production build: `npm run build` (includes TypeScript checking). Preview: `npm 
 ## Structure
 
 - `src/data/portfolio.ts` — editable project, career and technology data
-- `src/components` — reusable gallery, timeline, visual illustrations and site chrome
+- `src/components` — reusable gallery, timeline, screenshot covers and site chrome
 - `src/pages` — route-level content
 - `src/styles.css` — design tokens, site layout and responsive styles
 
 ## Important content notes
 
-Project visuals are **illustrative CSS designs**, not real application screenshots. Replace them with actual screenshots or short videos as the applications mature.
+Project covers use **real application screenshots** stored in `public/projects/<project-slug>/cover.webp`. The shared `ProjectVisual` component renders the same cover on the homepage carousel, projects listing and individual project pages. Project-specific screenshot galleries and demo-video embeds can be added separately.
 
 The new CV PDF has not been supplied with this repository, so the navigation **requests the CV by email** instead of linking to the previous, potentially outdated PDF. Once the new PDF is available, add it as `public/paulsamuelcumming.pdf` and point the navigation link at that asset.
 
