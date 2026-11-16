@@ -5,6 +5,7 @@ import { FiArrowLeft, FiArrowRight, FiArrowUpRight } from 'react-icons/fi';
 import type { Project } from '../data/portfolio';
 import { technologyNames } from '../data/portfolio';
 import { ProjectVisual } from './ProjectVisual';
+import { getProjectMetadata } from '../data/portfolio';
 
 export function ProjectCarousel({ projects }: { projects: readonly Project[] }) {
   const galleryRef = useRef<HTMLDivElement>(null);
@@ -55,7 +56,7 @@ export function ProjectCarousel({ projects }: { projects: readonly Project[] }) 
             <Link to={`/projects/${project.slug}`} className="project-card__visual-link" aria-label={`View ${project.name} project details`}>
               <ProjectVisual variant={project.visual} />
             </Link>
-            <div className="project-card__heading"><div><span className="micro-label">{project.category}</span><h3>{project.name}</h3></div><Link to={`/projects/${project.slug}`} aria-label={`Read about ${project.name}`} className="project-card__arrow"><FiArrowUpRight /></Link></div>
+            <div className="project-card__heading"><div><span className="micro-label">{getProjectMetadata(project)}</span><h3>{project.name}</h3></div><Link to={`/projects/${project.slug}`} aria-label={`Read about ${project.name}`} className="project-card__arrow"><FiArrowUpRight /></Link></div>
             <p>{project.summary}</p>
             <p className="project-card__stack">{project.technologies.map(id => technologyNames[id]).join(' · ')}</p>
           </article>

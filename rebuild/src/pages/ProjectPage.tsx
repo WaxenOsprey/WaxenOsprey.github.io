@@ -2,7 +2,7 @@ import { Link, useParams } from 'react-router-dom';
 import { FiArrowLeft, FiArrowUpRight, FiGithub } from 'react-icons/fi';
 import { ProjectVisual } from '../components/ProjectVisual';
 import { TechnologyLogo } from '../components/TechnologyLogo';
-import { projects } from '../data/portfolio';
+import {projects, getProjectMetadata} from '../data/portfolio';
 import { NotFoundPage } from './NotFoundPage';
 
 export function ProjectPage() {
@@ -12,7 +12,7 @@ export function ProjectPage() {
   return (
     <article className="inner-page project-detail">
       <Link className="text-link back-link" to="/projects"><FiArrowLeft aria-hidden="true" /> All projects</Link>
-      <header className="inner-page__header"><p className="eyebrow">{project.category.toUpperCase()} / {project.status.toUpperCase()}</p><h1>{project.name}<span className="accent">.</span></h1><p>{project.summary}</p></header>
+      <header className="inner-page__header"><p className="eyebrow">{getProjectMetadata(project).toUpperCase()}</p><h1>{project.name}<span className="accent">.</span></h1><p>{project.summary}</p></header>
       <div className="project-detail__visual"><ProjectVisual variant={project.visual} /></div>
       <div className="project-detail__body">
         <div><p className="eyebrow">THE PROJECT</p><h2>Overview</h2><p>{project.overview}</p>

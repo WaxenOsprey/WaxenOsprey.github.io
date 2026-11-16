@@ -87,7 +87,7 @@ export const roles: readonly Role[] = [
 ];
 
 export type ProjectVisualId = 'posterity' | 'overloader' | 'solar' | 'phoenix' | 'gwentish';
-export type ProjectStatus = 'In development' | 'Portfolio project' | 'CodeClan project';
+export type ProjectStatus = 'Independent project' | 'CodeClan project';
 
 export interface Project {
   slug: string;
@@ -100,13 +100,14 @@ export interface Project {
   highlights: readonly string[];
   visual: ProjectVisualId;
   sourceUrl?: string;
+  period: string;
   featured: boolean;
 }
 
 export const projects: readonly Project[] = [
   {
     slug: 'posterity', name: 'Posterity', category: 'Full-stack application',
-    status: 'In development', visual: 'posterity', featured: true,
+    status: 'Independent project', visual: 'posterity', featured: true,
     summary: 'A place for gamers to organise and share screenshots and clips in collaborative vaults.',
     overview: 'Posterity is an ongoing personal project focused on gaming media. It combines a C#/.NET backend organised around Clean Architecture with an Angular frontend. Users can create vaults, manage membership and invitations, upload media and interact through features such as comments, reactions and friendships.',
     technologies: ['csharp', 'dotnet', 'angular', 'postgresql', 'azure'],
@@ -116,10 +117,11 @@ export const projects: readonly Project[] = [
       'Image and video uploads backed by Azure Blob Storage with thumbnail generation.',
       'Angular components, stores and facades for media, vaults, profiles and activity feeds.',
     ],
+    period: 'March 2026 - Present',
   },
   {
     slug: 'overloader', name: 'OverLoader', category: 'Fitness & integration',
-    status: 'In development', visual: 'overloader', featured: true,
+    status: 'Independent project', visual: 'overloader', featured: true,
     summary: 'Progressive-overload strength tracking that connects to Garmin workout data.',
     overview: 'OverLoader is an in-progress strength-training application designed to turn recorded Garmin workout sets into useful progression recommendations. It explores importing workouts and activity data, comparing actual reps and weights, and updating existing Garmin workout definitions.',
     technologies: ['csharp', 'dotnet', 'angular', 'postgresql', 'garmin'],
@@ -129,7 +131,28 @@ export const projects: readonly Project[] = [
       'Double-progression rules that account for consecutive successful sessions.',
       'Designed to keep the workout definition and progression recommendations in one workflow.',
     ],
+    period: 'Oct - Nov 2026',
     sourceUrl: 'https://github.com/WaxenOsprey/OverLoader',
+  },
+  {
+    slug: 'gwentish', name: 'Gwentish!', category: 'Group capstone',
+    status: 'CodeClan project', visual: 'gwentish', featured: true,
+    summary: 'A multiplayer-inspired digital card game built with a Spring Boot backend and React.',
+    overview: 'A CodeClan capstone project recreating the mechanics of a strategic card game, with player accounts, deck selection and scoring.',
+    technologies: ['java', 'spring', 'react', 'javascript'],
+    highlights: ['Backend game rules and state management.', 'Player accounts and deck features.', 'React frontend and collaborative delivery.'],
+    period: 'May 2023',
+    sourceUrl: 'https://github.com/WaxenOsprey/Gwentish',
+  },
+  {
+    slug: 'phoenix-trader', name: 'PhoenixTrader', category: 'Group application',
+    status: 'CodeClan project', visual: 'phoenix', featured: true,
+    summary: 'A group-built portfolio and watchlist application for tracking investments.',
+    overview: 'A collaborative CodeClan project bringing together a React client, Node/Express API and MongoDB data store, with stock information sourced from the Finnhub API.',
+    technologies: ['react', 'javascript', 'node', 'mongodb'],
+    highlights: ['Portfolio and watchlist workflows.', 'Integration with external market data.', 'Team collaboration across frontend and backend components.'],
+    period: 'Apr 2023',
+    sourceUrl: 'https://github.com/WaxenOsprey/PhoenixTrader',
   },
   {
     slug: 'solar-system-db', name: 'SolarSystem.DB', category: 'Full-stack application',
@@ -139,25 +162,13 @@ export const projects: readonly Project[] = [
     technologies: ['python', 'postgresql'],
     highlights: ['Flask server and data persistence.', 'Relational data modelling with PostgreSQL.', 'CRUD workflows and user-facing pages.'],
     sourceUrl: 'https://github.com/WaxenOsprey/SolarSystem.DB',
-  },
-  {
-    slug: 'phoenix-trader', name: 'PhoenixTrader', category: 'Group application',
-    status: 'CodeClan project', visual: 'phoenix', featured: true,
-    summary: 'A group-built portfolio and watchlist application for tracking investments.',
-    overview: 'A collaborative CodeClan project bringing together a React client, Node/Express API and MongoDB data store, with stock information sourced from the Finnhub API.',
-    technologies: ['react', 'javascript', 'node', 'mongodb'],
-    highlights: ['Portfolio and watchlist workflows.', 'Integration with external market data.', 'Team collaboration across frontend and backend components.'],
-    sourceUrl: 'https://github.com/WaxenOsprey/PhoenixTrader',
-  },
-  {
-    slug: 'gwentish', name: 'Gwentish!', category: 'Group capstone',
-    status: 'CodeClan project', visual: 'gwentish', featured: true,
-    summary: 'A multiplayer-inspired digital card game built with a Spring Boot backend and React.',
-    overview: 'A CodeClan capstone project recreating the mechanics of a strategic card game, with player accounts, deck selection and scoring.',
-    technologies: ['java', 'spring', 'react', 'javascript'],
-    highlights: ['Backend game rules and state management.', 'Player accounts and deck features.', 'React frontend and collaborative delivery.'],
-    sourceUrl: 'https://github.com/WaxenOsprey/Gwentish',
-  },
+    period: 'Mar 2023',
+  }
 ];
+
+export function getProjectMetadata(project: Project): string {
+
+  return `${project.period} / ${project.status}`;
+}
 
 export const featuredProjects = projects.filter((project) => project.featured);
