@@ -26,7 +26,7 @@ export function HomePage() {
         <ExperienceTimeline />
       </section>
       <section id="skills" className="page-section" aria-labelledby="skills-title">
-        <div className="section-intro"><span className="eyebrow">04 / SKILLS &amp; TECHNOLOGIES</span><h2 id="skills-title">What I work with<span className="accent">.</span></h2><p>Tools and technologies I've used in professional development, QA and personal projects.</p></div>
+        <div className="section-intro"><span className="eyebrow">04 / SKILLS &amp; TECHNOLOGIES</span><h2 id="skills-title">What I've worked with<span className="accent">.</span></h2><p>Tools and technologies I've used in professional development, QA and personal projects.</p></div>
         <SkillsGallery />
       </section>
       <section className="contact-prompt" aria-labelledby="contact-prompt-title"><span className="eyebrow">05 / GET IN TOUCH</span><div className="contact-prompt__row"><h2 id="contact-prompt-title">Interested in working together?</h2><Link to="/contact" className="button-link">Contact me <FiArrowUpRight aria-hidden="true" /></Link></div></section>

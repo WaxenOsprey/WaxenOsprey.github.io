@@ -146,12 +146,12 @@ export const roles: readonly Role[] = [
     period: 'March 2025 – Present',
     summary: 'Developing and modernising healthcare applications, combining C#/.NET development with a strong foundation in testing and software quality.',
     achievements: [
-      'Contribute to application development and maintenance across established healthcare products, including InSight Medical Necessity and InSight Audit.',
-      'Work with C#, Visual Basic, ASP.NET Web Forms and SQL stored procedures while maintaining existing business logic and managing regression risk.',
-      'Support the ongoing integration of established applications into the wider Trisus platform, including shared authentication and API development.',
-      'Previously developed C# automated testing tools and regression coverage for Trisus Claims Informatics, working alongside engineering and product teams.',
+      'Contributed to application development and maintenance across established healthcare products, including InSight Medical Necessity and InSight Audit.',
+      'Worked with C#, Visual Basic, ASP.NET Web Forms and SQL stored procedures while maintaining existing business logic and managing regression risk.',
+      'Supported the ongoing integration of established applications into the wider Trisus platform, including shared authentication and API development.',
+      'Developed C# automated testing tools and regression coverage for Trisus Claims Informatics, working alongside engineering and product teams.',
     ],
-    technologies: ['csharp', 'dotnet', 'sql', 'azure', 'nunit'],
+    technologies: ['csharp', 'dotnet', 'webforms', 'aspnetcore', 'sql', 'visualbasic', 'azure', 'git', 'nunit'],
   },
   {
     id: 'implementation',
@@ -161,11 +161,11 @@ export const roles: readonly Role[] = [
     period: 'November 2024 – March 2025',
     summary: 'Built and supported scripting solutions to automate healthcare charge-management workflows and integrate customer systems.',
     achievements: [
-      'Worked directly with healthcare clients to understand Patient Accounting System workflows and capture requirements.',
+      'Worked directly with healthcare clients to understand Patient Accounting System workflows and captured requirements.',
       'Developed and tested VBA scripts using Boston Workstation to automate charge-management processes.',
       'Investigated integration issues and maintained scripts in customer environments.',
     ],
-    technologies: ['sql', 'git'],
+    technologies: ['sql', 'visualbasic'],
   },
   {
     id: 'support',
@@ -175,7 +175,7 @@ export const roles: readonly Role[] = [
     period: 'October 2023 – November 2024',
     summary: 'Investigated technical issues across healthcare applications, collaborating with customers and development teams.',
     achievements: [
-      'Troubleshot complex software issues, working with customers and internal teams to identify root causes.',
+      'Troubleshot complex software issues, worked with customers and internal teams to identify root causes.',
       'Collaborated with developers to reproduce defects and understand application behaviour.',
       'Built a foundation in product functionality, customer workflows and professional software development practices.',
     ],
