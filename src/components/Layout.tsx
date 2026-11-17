@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FiArrowUpRight, FiGithub, FiLinkedin, FiMail, FiMenu, FiX } from 'react-icons/fi';
+import { FiDownload, FiGithub, FiLinkedin, FiMail, FiMenu, FiX } from 'react-icons/fi';
 
 const navigation = [
   { label: 'Work', to: '/#work' },
@@ -36,7 +36,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         </button>
         <nav id="primary-navigation" className={`primary-nav${menuOpen ? ' primary-nav--open' : ''}`} aria-label="Primary navigation">
           {navigation.map(item => <Link key={item.to} to={item.to} className={pathname === item.to && !hash ? 'nav-active' : ''}>{item.label}</Link>)}
-          <a className="nav-cv" href="mailto:paulsamuelcummingdev@gmail.com?subject=CV%20request" title="Request an up-to-date CV">Request CV <FiArrowUpRight aria-hidden="true" /></a>
+          <a className="nav-cv" href="/paulsamuelcumming.pdf" download="Paul_Cumming_CV.pdf" title="Download my CV as a PDF">Download CV <FiDownload aria-hidden="true" /></a>
         </nav>
       </header>
       <ScrollManager />
