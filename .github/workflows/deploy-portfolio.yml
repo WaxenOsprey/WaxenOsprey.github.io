@@ -1,12 +1,9 @@
-name: Deploy rebuilt portfolio
+name: Deploy portfolio
 
 on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths:
-      - 'rebuild/**'
-      - '.github/workflows/deploy-portfolio.yml'
 
 permissions:
   contents: read
@@ -25,17 +22,17 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          package-manager-cache: false
-      - name: Install
-        working-directory: rebuild
-        run: npm install
-      - name: Build
-        working-directory: rebuild
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Build portfolio
         run: npm run build
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: rebuild/dist
+          path: dist
   deploy:
     environment:
       name: github-pages

@@ -1,71 +1,41 @@
-# Getting Started with Create React App
+# Paul Cumming — Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Personal software engineering portfolio built with **React 19, TypeScript and Vite 7**. The current portfolio replaced an earlier Create React App implementation in November 2026.
 
-## Available Scripts
+## Local development
 
-In the project directory, you can run:
+Requirements: Node.js 22+ and npm.
 
-### `npm start`
+```sh
+npm ci
+npm run dev
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Visit the local URL reported by Vite (normally http://localhost:5173/).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+For a production build, run `npm run build`; this checks TypeScript and outputs a static site to `dist/`. To preview the built site, run `npm run preview`.
 
-### `npm test`
+## Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `src/data/portfolio.ts` — editable projects, experience, skills and technology metadata
+- `src/components/` — project carousel, screenshot visuals, skills gallery and shared layout
+- `src/pages/` — individual routes and portfolio pages
+- `src/styles.css` — global styles and responsive rules
+- `public/projects/` — project cover screenshots
+- `public/logos/` — technology SVG logos and their source credits
+- `public/404.html` — GitHub Pages SPA deep-link redirect
+- `public/CNAME` — custom domain configuration
 
-### `npm run build`
+The three project-display surfaces (home carousel, project index, and project detail) share the same cover image for each project. Individual gallery and video embeds can be added separately.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Deploying on GitHub Pages
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The workflow `.github/workflows/deploy-portfolio.yml` runs on pushes to `main`, installs dependencies using `npm ci`, runs the Vite build, and deploys the generated `dist/` folder using GitHub Actions.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+In **GitHub → Settings → Pages → Build and deployment**, select **GitHub Actions** as the source. Ensure the custom domain remains `www.paulsamuelcumming.dev`. The custom domain is carried through by `public/CNAME`.
 
-### `npm run eject`
+The site uses `BrowserRouter`; `public/404.html` redirects deep links through `index.html`. If moving to a host that supports rewrites, configure the usual SPA rewrite to `/index.html`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Historical implementation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# WaxenOsprey.github.io
+The earlier portfolio was built with Create React App and remains recoverable from Git history (for example, commit `291104a`). The former `rebuild/` source tree was promoted into the repository root when this version became the primary site. There is intentionally no duplicated application folder.
