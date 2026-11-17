@@ -6,16 +6,13 @@ export interface ProjectScreenshot {
   caption: string;
 }
 
-/**
- * Screenshots are stored in public/projects/<slug>/.
+/*
  * Keep each project's first image in sync with its ProjectVisual cover.
  */
 export const projectScreenshots: Record<ProjectVisualId, readonly ProjectScreenshot[]> = {
   posterity: [
-    { src: '/projects/posterity/cover.webp', alt: "Posterity Odin's Apiary vault with shared game screenshots", caption: "Odin's Apiary — collaborative vault" },
+    { src: '/projects/posterity/cover.webp', alt: "Posterity Odin's Apiary vault with shared game screenshots", caption: "Odin's Apiary - collaborative vault" },
     { src: '/projects/posterity/vaults.webp', alt: 'Posterity vault library showing several gaming collections', caption: 'Vault library' },
-    { src: '/projects/posterity/community-vault.webp', alt: 'Posterity shared gaming vault with media and members', caption: 'Shared community vault' },
-    { src: '/projects/posterity/vault-media.webp', alt: 'Posterity media grid with screenshots and clips', caption: 'Vault screenshots and clips' },
     { src: '/projects/posterity/media-comments.webp', alt: 'Posterity media detail page displaying a game screenshot alongside a threaded comments panel', caption: 'Media details and comments' },
     { src: '/projects/posterity/activity-feed.webp', alt: 'Posterity activity feed showing recent media and vault activity', caption: 'Activity feed' },
     { src: '/projects/posterity/profile.webp', alt: 'Posterity user profile with vaults and activity', caption: 'User profile' },
@@ -43,6 +40,6 @@ export const projectScreenshots: Record<ProjectVisualId, readonly ProjectScreens
   gwentish: [
     { src: '/projects/gwentish/cover.webp', alt: 'Gwentish player setup in the medieval tavern', caption: 'Player setup' },
     { src: '/projects/gwentish/gameplay.webp', alt: 'Gwentish gameplay showing hand of cards and game board', caption: 'Gameplay and card selection' },
-    { src: '/projects/gwentish/game-over.webp', alt: 'Gwentish end-game screen showing Geralt as the winner', caption: 'Game over — final result' },
+    { src: '/projects/gwentish/game-over.webp', alt: 'Gwentish end-game screen showing Geralt as the winner', caption: 'Game over - final result' },
   ],
 };
